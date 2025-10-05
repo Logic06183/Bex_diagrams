@@ -1,0 +1,245 @@
+<svg width="1200" height="750" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs>
+    <style>
+      .main-title { font-family: 'Arial', sans-serif; font-size: 22px; font-weight: bold; fill: #2c3e50; }
+      .subtitle { font-family: 'Arial', sans-serif; font-size: 14px; fill: #7f8c8d; }
+      .section-title { font-family: 'Arial', sans-serif; font-size: 14px; font-weight: 600; fill: #8E44AD; }
+      .org-name { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: 600; fill: #6c3483; }
+      .action-text { font-family: 'Arial', sans-serif; font-size: 11px; fill: #34495e; }
+      .year-label { font-family: 'Arial', sans-serif; font-size: 12px; fill: #666; font-weight: 600; }
+      .timeline-stroke { stroke: #8E44AD; stroke-width: 2; }
+      .action-fill { fill: #8E44AD; }
+      .legal-fill { fill: #3498db; }
+      .campaign-fill { fill: #e74c3c; }
+      .solidarity-fill { fill: #2ecc71; }
+      .coalition-fill { fill: #f39c12; }
+    </style>
+    
+    <!-- Gradients -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8E44AD;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <linearGradient id="actionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E44AD;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8E44AD;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Patterns -->
+    <pattern id="stripePattern" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#f0f0f0"/>
+      <path d="M 0,4 l 4,-4 M -1,1 l 2,-2 M 3,5 l 2,-2" stroke="#8E44AD" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="1" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8E44AD"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#fafbfc"/>
+  
+  <!-- Title Section -->
+  <text x="600" y="35" text-anchor="middle" class="main-title">Civil Society Counter-Mobilisation</text>
+  <text x="600" y="55" text-anchor="middle" class="subtitle">Responses to Xenophobia and Protection of Migrant Rights (1998-2025)</text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(100, 80)">
+    <text x="0" y="0" class="section-title">Action Types:</text>
+    <g transform="translate(0, 20)">
+      <circle cx="8" cy="0" r="6" class="campaign-fill"/>
+      <text x="20" y="4" class="action-text">Campaigns</text>
+      
+      <circle cx="150" cy="0" r="6" class="legal-fill"/>
+      <text x="162" y="4" class="action-text">Legal Actions</text>
+      
+      <circle cx="280" cy="0" r="6" class="coalition-fill"/>
+      <text x="292" y="4" class="action-text">Coalitions</text>
+      
+      <circle cx="410" cy="0" r="6" class="solidarity-fill"/>
+      <text x="422" y="4" class="action-text">Solidarity</text>
+      
+      <rect x="530" y="-6" width="12" height="12" fill="url(#stripePattern)"/>
+      <text x="548" y="4" class="action-text">Ongoing Activities</text>
+    </g>
+  </g>
+  
+  <!-- Main Timeline -->
+  <g id="main-timeline" transform="translate(100, 400)">
+    <line x1="0" y1="0" x2="1000" y2="0" class="timeline-stroke" marker-end="url(#arrowPurple)"/>
+    
+    <!-- Year markers -->
+    <g id="year-markers">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="0" y="20" text-anchor="middle" class="year-label">1998</text>
+      
+      <line x1="100" y1="-5" x2="100" y2="5" stroke="#8E44AD" stroke-width="1"/>
+      <text x="100" y="20" text-anchor="middle" class="year-label">2000</text>
+      
+      <line x1="250" y1="-5" x2="250" y2="5" stroke="#8E44AD" stroke-width="1"/>
+      <text x="250" y="20" text-anchor="middle" class="year-label">2003</text>
+      
+      <line x1="400" y1="-5" x2="400" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="400" y="20" text-anchor="middle" class="year-label">2006</text>
+      
+      <line x1="500" y1="-5" x2="500" y2="5" stroke="#8E44AD" stroke-width="3"/>
+      <text x="500" y="20" text-anchor="middle" class="year-label">2008</text>
+      
+      <line x1="650" y1="-5" x2="650" y2="5" stroke="#8E44AD" stroke-width="1"/>
+      <text x="650" y="20" text-anchor="middle" class="year-label">2011</text>
+      
+      <line x1="750" y1="-5" x2="750" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="750" y="20" text-anchor="middle" class="year-label">2015</text>
+      
+      <line x1="850" y1="-5" x2="850" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="850" y="20" text-anchor="middle" class="year-label">2019</text>
+      
+      <line x1="950" y1="-5" x2="950" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="950" y="20" text-anchor="middle" class="year-label">2023</text>
+      
+      <line x1="1000" y1="-5" x2="1000" y2="5" stroke="#8E44AD" stroke-width="2"/>
+      <text x="1000" y="20" text-anchor="middle" class="year-label">2025</text>
+    </g>
+  </g>
+  
+  <!-- CSO Actions and Events -->
+  <g id="cso-actions" transform="translate(100, 400)">
+    
+    <!-- Roll Back Xenophobia Campaign (1998) -->
+    <g transform="translate(0, 0)">
+      <line x1="0" y1="0" x2="0" y2="-100" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="2,2"/>
+      <circle cx="0" cy="-100" r="8" class="campaign-fill" filter="url(#shadow)"/>
+      <g transform="translate(-70, -150)">
+        <rect x="0" y="0" width="140" height="70" fill="white" stroke="#e74c3c" stroke-width="1.5" rx="5" filter="url(#shadow)"/>
+        <text x="70" y="20" text-anchor="middle" class="org-name">Roll Back Xenophobia</text>
+        <text x="70" y="35" text-anchor="middle" class="action-text">National campaign launch</text>
+        <text x="70" y="48" text-anchor="middle" class="action-text">SAHRC partnership</text>
+        <text x="70" y="61" text-anchor="middle" class="action-text">(1998)</text>
+      </g>
+    </g>
+    
+    <!-- Legal Challenges (Ongoing bar) -->
+    <g transform="translate(200, 0)">
+      <rect x="0" y="60" width="600" height="30" fill="url(#stripePattern)" stroke="#3498db" stroke-width="1" rx="3" filter="url(#shadow)"/>
+      <text x="300" y="80" text-anchor="middle" class="org-name" fill="#fff">Ongoing Legal Challenges</text>
+      <text x="300" y="110" text-anchor="middle" class="action-text">Constitutional Court cases • Refugee rights litigation • Documentation challenges</text>
+    </g>
+    
+    <!-- 2008 Crisis Response -->
+    <g transform="translate(500, 0)">
+      <line x1="0" y1="0" x2="0" y2="-150" stroke="#8E44AD" stroke-width="2"/>
+      <circle cx="0" cy="-150" r="10" class="action-fill" filter="url(#shadow)"/>
+      <g transform="translate(-90, -230)">
+        <rect x="0" y="0" width="180" height="100" fill="url(#purpleGradient)" stroke="#8E44AD" stroke-width="2" rx="5" filter="url(#shadow)"/>
+        <text x="90" y="20" text-anchor="middle" class="org-name" fill="#fff">2008 Crisis Response</text>
+        <text x="90" y="38" text-anchor="middle" class="action-text" fill="#fff">Emergency coordination</text>
+        <text x="90" y="52" text-anchor="middle" class="action-text" fill="#fff">TAC, CORMSA, LHR</text>
+        <text x="90" y="66" text-anchor="middle" class="action-text" fill="#fff">Humanitarian aid</text>
+        <text x="90" y="80" text-anchor="middle" class="action-text" fill="#fff">Protection services</text>
+      </g>
+    </g>
+    
+    <!-- Coalition Against Xenophobia -->
+    <g transform="translate(650, 0)">
+      <line x1="0" y1="0" x2="0" y2="-100" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="2,2"/>
+      <circle cx="0" cy="-100" r="8" class="coalition-fill" filter="url(#shadow)"/>
+      <g transform="translate(-70, -150)">
+        <rect x="0" y="0" width="140" height="70" fill="white" stroke="#f39c12" stroke-width="1.5" rx="5" filter="url(#shadow)"/>
+        <text x="70" y="20" text-anchor="middle" class="org-name">Coalition Formation</text>
+        <text x="70" y="35" text-anchor="middle" class="action-text">Multiple CSOs unite</text>
+        <text x="70" y="48" text-anchor="middle" class="action-text">Coordinated advocacy</text>
+        <text x="70" y="61" text-anchor="middle" class="action-text">(2011-ongoing)</text>
+      </g>
+    </g>
+    
+    <!-- KAAX Coalition -->
+    <g transform="translate(750, 0)">
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#f39c12" stroke-width="2"/>
+      <circle cx="0" cy="100" r="9" class="coalition-fill" filter="url(#shadow)"/>
+      <g transform="translate(-80, 120)">
+        <rect x="0" y="0" width="160" height="85" fill="white" stroke="#f39c12" stroke-width="1.5" rx="5" filter="url(#shadow)"/>
+        <text x="80" y="20" text-anchor="middle" class="org-name">KAAX Coalition</text>
+        <text x="80" y="35" text-anchor="middle" class="action-text">Kopanang Africa</text>
+        <text x="80" y="48" text-anchor="middle" class="action-text">Against Xenophobia</text>
+        <text x="80" y="61" text-anchor="middle" class="action-text">2015 violence response</text>
+        <text x="80" y="74" text-anchor="middle" class="action-text">70+ organizations</text>
+      </g>
+    </g>
+    
+    <!-- Solidarity Actions 2019-2025 -->
+    <g transform="translate(850, 0)">
+      <rect x="0" y="-80" width="150" height="40" fill="url(#actionGradient)" rx="3" filter="url(#shadow)"/>
+      <text x="75" y="-55" text-anchor="middle" class="org-name" fill="#fff">Solidarity Actions</text>
+      <text x="75" y="-40" text-anchor="middle" class="action-text" fill="#fff">Community protection</text>
+      <text x="75" y="-25" text-anchor="middle" class="action-text" fill="#fff">(2019-2025)</text>
+    </g>
+  </g>
+  
+  <!-- Key Organizations Panel -->
+  <g id="organizations" transform="translate(100, 550)">
+    <rect x="0" y="0" width="1000" height="160" fill="#fff" stroke="#8E44AD" stroke-width="1.5" rx="5" filter="url(#shadow)"/>
+    
+    <text x="20" y="25" class="section-title">Key Civil Society Organizations:</text>
+    
+    <!-- Organization columns -->
+    <g transform="translate(20, 45)">
+      <!-- Column 1 -->
+      <g>
+        <text x="0" y="0" class="org-name">Legal & Rights Organizations:</text>
+        <text x="0" y="20" class="action-text">• Lawyers for Human Rights (LHR)</text>
+        <text x="0" y="35" class="action-text">• Legal Resources Centre (LRC)</text>
+        <text x="0" y="50" class="action-text">• SECTION27</text>
+        <text x="0" y="65" class="action-text">• ProBono.Org</text>
+        <text x="0" y="80" class="action-text">• Scalabrini Centre</text>
+      </g>
+      
+      <!-- Column 2 -->
+      <g transform="translate(250, 0)">
+        <text x="0" y="0" class="org-name">Refugee & Migrant Support:</text>
+        <text x="0" y="20" class="action-text">• CORMSA</text>
+        <text x="0" y="35" class="action-text">• Jesuit Refugee Service</text>
+        <text x="0" y="50" class="action-text">• PASSOP</text>
+        <text x="0" y="65" class="action-text">• Africa Solidarity Network</text>
+        <text x="0" y="80" class="action-text">• Sonke Gender Justice</text>
+      </g>
+      
+      <!-- Column 3 -->
+      <g transform="translate(500, 0)">
+        <text x="0" y="0" class="org-name">Social Movements:</text>
+        <text x="0" y="20" class="action-text">• Treatment Action Campaign</text>
+        <text x="0" y="35" class="action-text">• Right2Know Campaign</text>
+        <text x="0" y="50" class="action-text">• Social Justice Coalition</text>
+        <text x="0" y="65" class="action-text">• Equal Education</text>
+        <text x="0" y="80" class="action-text">• Abahlali baseMjondolo</text>
+      </g>
+      
+      <!-- Column 4 -->
+      <g transform="translate(750, 0)">
+        <text x="0" y="0" class="org-name">Research & Advocacy:</text>
+        <text x="0" y="20" class="action-text">• African Centre for Migration</text>
+        <text x="0" y="35" class="action-text">• Xenowatch</text>
+        <text x="0" y="50" class="action-text">• Institute for Justice</text>
+        <text x="0" y="65" class="action-text">• Centre for Human Rights</text>
+        <text x="0" y="80" class="action-text">• SAHRC</text>
+      </g>
+    </g>
+    
+    <line x1="20" y1="140" x2="980" y2="140" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="20" y="155" class="action-text" font-style="italic">Note: Many organizations work across categories and collaborate through various coalitions and partnerships</text>
+  </g>
+</svg>

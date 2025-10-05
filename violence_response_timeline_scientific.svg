@@ -1,0 +1,293 @@
+<!-- Violence & Response Timeline - Scientific/Academic Style for A4 Landscape -->
+<!-- Dimensions: 297mm x 210mm at 300 DPI = 3508 x 2480 pixels -->
+<!-- Using 1190 x 842 for web display (proportional to A4 landscape) -->
+<svg width="1190" height="842" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 842">
+  <defs>
+    <style>
+      /* Academic Typography */
+      .figure-title { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; fill: #000000; }
+      .figure-caption { font-family: Arial, Helvetica, sans-serif; font-size: 10px; fill: #333333; }
+      .axis-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: Arial, Helvetica, sans-serif; font-size: 9px; fill: #333333; }
+      .event-label { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      .intensity-label { font-family: Arial, Helvetica, sans-serif; font-size: 7px; fill: #666666; }
+      .legend-text { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      
+      /* Violence Intensity Scale - Single Hue (Red) */
+      .violence-low { fill: #fee5d9; stroke: #de2d26; }
+      .violence-medium { fill: #fcae91; stroke: #de2d26; }
+      .violence-high { fill: #fb6a4a; stroke: #de2d26; }
+      .violence-severe { fill: #de2d26; stroke: #a50f15; }
+      .violence-extreme { fill: #a50f15; stroke: #67000d; }
+      
+      /* CSO Response Scale - Single Hue (Green) */
+      .response-weak { fill: #edf8e9; stroke: #238b45; }
+      .response-moderate { fill: #bae4b3; stroke: #238b45; }
+      .response-strong { fill: #74c476; stroke: #238b45; }
+      .response-intense { fill: #31a354; stroke: #238b45; }
+      .response-sustained { fill: #238b45; stroke: #005a32; }
+      
+      /* Grid and Structure */
+      .grid-line { stroke: #e0e0e0; stroke-width: 0.5; }
+      .axis-line { stroke: #333333; stroke-width: 1.5; }
+      .severity-line { stroke: #cccccc; stroke-width: 0.5; stroke-dasharray: 2,2; }
+      .causal-link { stroke: #666666; stroke-width: 1; fill: none; stroke-dasharray: 3,3; }
+    </style>
+    
+    <!-- Arrow markers for causal relationships -->
+    <marker id="causal-arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#666666"/>
+    </marker>
+    
+    <!-- Pattern for organized movements -->
+    <pattern id="organized-pattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#de2d26"/>
+      <circle cx="4" cy="4" r="1" fill="#a50f15"/>
+    </pattern>
+  </defs>
+  
+  <!-- White background -->
+  <rect width="1190" height="842" fill="white"/>
+  
+  <!-- Title -->
+  <text x="595" y="40" text-anchor="middle" class="figure-title">Figure 3: Anti-Migrant Violence and Civil Society Response Patterns (1994-2025)</text>
+  <text x="595" y="58" text-anchor="middle" class="figure-caption">Temporal Relationship Between Xenophobic Mobilisation and Counter-Mobilisation in South Africa</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(80, 100)">
+    
+    <!-- Background grid -->
+    <g id="grid">
+      <!-- Vertical grid lines (every 2 years) -->
+      <line x1="0" y1="0" x2="0" y2="580" class="grid-line"/>
+      <line x1="67" y1="0" x2="67" y2="580" class="grid-line"/>
+      <line x1="134" y1="0" x2="134" y2="580" class="grid-line"/>
+      <line x1="201" y1="0" x2="201" y2="580" class="grid-line"/>
+      <line x1="268" y1="0" x2="268" y2="580" class="grid-line"/>
+      <line x1="335" y1="0" x2="335" y2="580" class="grid-line"/>
+      <line x1="402" y1="0" x2="402" y2="580" class="grid-line"/>
+      <line x1="469" y1="0" x2="469" y2="580" class="grid-line"/>
+      <line x1="536" y1="0" x2="536" y2="580" class="grid-line"/>
+      <line x1="603" y1="0" x2="603" y2="580" class="grid-line"/>
+      <line x1="670" y1="0" x2="670" y2="580" class="grid-line"/>
+      <line x1="737" y1="0" x2="737" y2="580" class="grid-line"/>
+      <line x1="804" y1="0" x2="804" y2="580" class="grid-line"/>
+      <line x1="871" y1="0" x2="871" y2="580" class="grid-line"/>
+      <line x1="938" y1="0" x2="938" y2="580" class="grid-line"/>
+      <line x1="1005" y1="0" x2="1005" y2="580" class="grid-line"/>
+      
+      <!-- Horizontal dividing line -->
+      <line x1="0" y1="290" x2="1005" y2="290" class="axis-line"/>
+    </g>
+    
+    <!-- Section labels -->
+    <text x="-70" y="145" class="axis-label" text-anchor="middle" transform="rotate(-90, -70, 145)">ANTI-MIGRANT VIOLENCE</text>
+    <text x="-70" y="435" class="axis-label" text-anchor="middle" transform="rotate(-90, -70, 435)">CSO RESPONSE</text>
+    
+    <!-- Intensity scales -->
+    <g id="intensity-scales">
+      <!-- Violence intensity scale -->
+      <text x="-30" y="50" class="intensity-label" text-anchor="end">Extreme</text>
+      <text x="-30" y="100" class="intensity-label" text-anchor="end">High</text>
+      <text x="-30" y="150" class="intensity-label" text-anchor="end">Medium</text>
+      <text x="-30" y="200" class="intensity-label" text-anchor="end">Low</text>
+      <text x="-30" y="250" class="intensity-label" text-anchor="end">Sporadic</text>
+      
+      <!-- Response intensity scale -->
+      <text x="-30" y="330" class="intensity-label" text-anchor="end">Weak</text>
+      <text x="-30" y="380" class="intensity-label" text-anchor="end">Moderate</text>
+      <text x="-30" y="430" class="intensity-label" text-anchor="end">Strong</text>
+      <text x="-30" y="480" class="intensity-label" text-anchor="end">Intense</text>
+      <text x="-30" y="530" class="intensity-label" text-anchor="end">Sustained</text>
+    </g>
+    
+    <!-- Violence Events (Top Section) -->
+    <g id="violence-events">
+      
+      <!-- 1994-1995 Early incidents -->
+      <rect x="0" y="230" width="40" height="20" class="violence-low" opacity="0.7"/>
+      <text x="5" y="220" class="event-label" transform="rotate(-45, 5, 220)">Early incidents</text>
+      
+      <!-- 1997 Operation jobs -->
+      <rect x="80" y="210" width="20" height="30" class="violence-medium" opacity="0.6"/>
+      <text x="85" y="205" class="event-label" transform="rotate(-45, 85, 205)">Op. jobs</text>
+      
+      <!-- 1998 ROAR campaign -->
+      <rect x="107" y="180" width="27" height="60" class="violence-high" opacity="0.8"/>
+      <text x="115" y="175" class="event-label" transform="rotate(-45, 115, 175)">ROAR</text>
+      
+      <!-- 2000 Lindela raid -->
+      <rect x="167" y="200" width="20" height="40" class="violence-medium" opacity="0.6"/>
+      <text x="172" y="195" class="event-label" transform="rotate(-45, 172, 195)">Lindela</text>
+      
+      <!-- 2001 Operation Crackdown -->
+      <rect x="200" y="190" width="25" height="50" class="violence-high" opacity="0.7"/>
+      <text x="207" y="185" class="event-label" transform="rotate(-45, 207, 185)">Crackdown</text>
+      
+      <!-- 2008 May violence - MAJOR EVENT -->
+      <rect x="360" y="20" width="35" height="220" class="violence-extreme" opacity="1.0"/>
+      <text x="377" y="10" class="event-label" font-weight="600" text-anchor="middle">May 2008</text>
+      <text x="377" y="250" class="intensity-label" text-anchor="middle">62 killed, 670 injured</text>
+      <text x="377" y="262" class="intensity-label" text-anchor="middle">100,000 displaced</text>
+      
+      <!-- Post-2008 sporadic events -->
+      <rect x="420" y="210" width="50" height="30" class="violence-medium" opacity="0.5"/>
+      <text x="440" y="205" class="event-label" transform="rotate(-45, 440, 205)">2008-2010</text>
+      
+      <!-- 2013 Attacks -->
+      <rect x="537" y="170" width="20" height="70" class="violence-high" opacity="0.7"/>
+      <text x="542" y="165" class="event-label" transform="rotate(-45, 542, 165)">2013</text>
+      
+      <!-- 2015 April violence -->
+      <rect x="603" y="100" width="30" height="140" class="violence-severe" opacity="0.9"/>
+      <text x="618" y="95" class="event-label" font-weight="600" text-anchor="middle">Apr 2015</text>
+      <text x="618" y="250" class="intensity-label" text-anchor="middle">7 killed</text>
+      
+      <!-- 2019 September violence -->
+      <rect x="737" y="120" width="25" height="120" class="violence-severe" opacity="0.8"/>
+      <text x="749" y="115" class="event-label" font-weight="600" text-anchor="middle">Sept 2019</text>
+      <text x="749" y="250" class="intensity-label" text-anchor="middle">12 killed</text>
+      
+      <!-- Operation Dudula 2021-2025 -->
+      <rect x="820" y="80" width="185" height="160" class="violence-high" opacity="0.6" fill="url(#organized-pattern)"/>
+      <text x="912" y="70" class="event-label" font-weight="600" text-anchor="middle">Operation Dudula</text>
+      <text x="912" y="250" class="intensity-label" text-anchor="middle">Organized movement</text>
+      <text x="912" y="262" class="intensity-label" text-anchor="middle">Nationwide chapters</text>
+    </g>
+    
+    <!-- CSO Response Events (Bottom Section) -->
+    <g id="cso-response">
+      
+      <!-- 1998 TAC formation -->
+      <rect x="107" y="320" width="27" height="40" class="response-moderate" opacity="0.7"/>
+      <text x="115" y="375" class="event-label" transform="rotate(45, 115, 375)">TAC forms</text>
+      
+      <!-- 2000 APF formation -->
+      <rect x="167" y="310" width="33" height="60" class="response-strong" opacity="0.8"/>
+      <text x="178" y="385" class="event-label" transform="rotate(45, 178, 385)">APF</text>
+      
+      <!-- 2001 LPM formation -->
+      <rect x="200" y="315" width="25" height="55" class="response-moderate" opacity="0.7"/>
+      <text x="207" y="385" class="event-label" transform="rotate(45, 207, 385)">LPM</text>
+      
+      <!-- Post-2008 mobilisation -->
+      <rect x="395" y="350" width="80" height="180" class="response-intense" opacity="0.9"/>
+      <text x="435" y="385" class="event-label" transform="rotate(45, 435, 385)">Post-2008</text>
+      <text x="435" y="400" class="event-label" transform="rotate(45, 435, 400)">mobilisation</text>
+      <text x="435" y="545" class="intensity-label" text-anchor="middle">Legal aid networks</text>
+      <text x="435" y="557" class="intensity-label" text-anchor="middle">Refugee support</text>
+      
+      <!-- 2010-2015 Institutionalisation -->
+      <rect x="503" y="380" width="134" height="100" class="response-moderate" opacity="0.6"/>
+      <text x="570" y="415" class="event-label" text-anchor="middle">NGO institutionalisation</text>
+      <text x="570" y="430" class="event-label" text-anchor="middle">Government partnerships</text>
+      
+      <!-- 2015-2019 Re-mobilisation -->
+      <rect x="603" y="320" width="134" height="160" class="response-strong" opacity="0.8"/>
+      <text x="670" y="355" class="event-label" text-anchor="middle">Re-mobilisation</text>
+      <text x="670" y="370" class="event-label" text-anchor="middle">Community networks</text>
+      <text x="670" y="385" class="event-label" text-anchor="middle">Legal challenges</text>
+      
+      <!-- 2019-2025 Sustained response -->
+      <rect x="737" y="300" width="268" height="230" class="response-sustained" opacity="0.7"/>
+      <text x="871" y="340" class="event-label" text-anchor="middle" font-weight="600">Sustained Counter-mobilisation</text>
+      <text x="871" y="360" class="event-label" text-anchor="middle">Multi-sector coalitions</text>
+      <text x="871" y="375" class="event-label" text-anchor="middle">Digital organising</text>
+      <text x="871" y="390" class="event-label" text-anchor="middle">Legal victories</text>
+      <text x="871" y="405" class="event-label" text-anchor="middle">Media campaigns</text>
+    </g>
+    
+    <!-- Causal relationship arrows -->
+    <g id="causal-relationships">
+      <!-- 2008 violence → response -->
+      <path d="M 377,240 Q 390,260 400,300" class="causal-link" marker-end="url(#causal-arrow)"/>
+      
+      <!-- 2015 violence → response -->
+      <path d="M 618,240 Q 630,260 640,300" class="causal-link" marker-end="url(#causal-arrow)"/>
+      
+      <!-- 2019 violence → response -->
+      <path d="M 749,240 Q 760,260 770,300" class="causal-link" marker-end="url(#causal-arrow)"/>
+      
+      <!-- Operation Dudula → sustained response -->
+      <path d="M 912,240 Q 920,260 930,300" class="causal-link" marker-end="url(#causal-arrow)"/>
+    </g>
+    
+    <!-- Timeline axis -->
+    <g id="timeline-axis">
+      <line x1="0" y1="580" x2="1005" y2="580" class="axis-line"/>
+      
+      <!-- Year labels -->
+      <text x="0" y="600" class="year-label" text-anchor="middle">1994</text>
+      <text x="67" y="600" class="year-label" text-anchor="middle">1996</text>
+      <text x="134" y="600" class="year-label" text-anchor="middle">1998</text>
+      <text x="201" y="600" class="year-label" text-anchor="middle">2000</text>
+      <text x="268" y="600" class="year-label" text-anchor="middle">2002</text>
+      <text x="335" y="600" class="year-label" text-anchor="middle">2004</text>
+      <text x="402" y="600" class="year-label" text-anchor="middle">2006</text>
+      <text x="469" y="600" class="year-label" text-anchor="middle">2008</text>
+      <text x="536" y="600" class="year-label" text-anchor="middle">2010</text>
+      <text x="603" y="600" class="year-label" text-anchor="middle">2012</text>
+      <text x="670" y="600" class="year-label" text-anchor="middle">2014</text>
+      <text x="737" y="600" class="year-label" text-anchor="middle">2016</text>
+      <text x="804" y="600" class="year-label" text-anchor="middle">2018</text>
+      <text x="871" y="600" class="year-label" text-anchor="middle">2020</text>
+      <text x="938" y="600" class="year-label" text-anchor="middle">2022</text>
+      <text x="1005" y="600" class="year-label" text-anchor="middle">2024</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(80, 720)">
+    <text x="0" y="0" class="axis-label">Legend:</text>
+    
+    <!-- Violence intensity -->
+    <g transform="translate(80, -10)">
+      <text x="0" y="0" class="legend-text" font-weight="600">Violence Intensity:</text>
+      <rect x="0" y="10" width="15" height="8" class="violence-low"/>
+      <text x="20" y="17" class="legend-text">Low</text>
+      <rect x="50" y="10" width="15" height="8" class="violence-medium"/>
+      <text x="70" y="17" class="legend-text">Medium</text>
+      <rect x="110" y="10" width="15" height="8" class="violence-high"/>
+      <text x="130" y="17" class="legend-text">High</text>
+      <rect x="160" y="10" width="15" height="8" class="violence-severe"/>
+      <text x="180" y="17" class="legend-text">Severe</text>
+      <rect x="220" y="10" width="15" height="8" class="violence-extreme"/>
+      <text x="240" y="17" class="legend-text">Extreme</text>
+    </g>
+    
+    <!-- Response intensity -->
+    <g transform="translate(400, -10)">
+      <text x="0" y="0" class="legend-text" font-weight="600">CSO Response:</text>
+      <rect x="0" y="10" width="15" height="8" class="response-weak"/>
+      <text x="20" y="17" class="legend-text">Weak</text>
+      <rect x="60" y="10" width="15" height="8" class="response-moderate"/>
+      <text x="80" y="17" class="legend-text">Moderate</text>
+      <rect x="130" y="10" width="15" height="8" class="response-strong"/>
+      <text x="150" y="17" class="legend-text">Strong</text>
+      <rect x="190" y="10" width="15" height="8" class="response-sustained"/>
+      <text x="210" y="17" class="legend-text">Sustained</text>
+    </g>
+    
+    <!-- Organized movement pattern -->
+    <g transform="translate(700, -10)">
+      <text x="0" y="0" class="legend-text" font-weight="600">Organized Movement:</text>
+      <rect x="0" y="10" width="15" height="8" fill="url(#organized-pattern)"/>
+      <text x="20" y="17" class="legend-text">Structured groups</text>
+    </g>
+    
+    <!-- Causal relationships -->
+    <g transform="translate(900, -10)">
+      <text x="0" y="0" class="legend-text" font-weight="600">Causal Response:</text>
+      <path d="M 0,14 L 20,14" class="causal-link" marker-end="url(#causal-arrow)"/>
+      <text x="25" y="17" class="legend-text">Response trigger</text>
+    </g>
+  </g>
+  
+  <!-- Figure caption -->
+  <text x="80" y="780" class="figure-caption">
+    Violence data sources: Human Rights Commission, Centre for the Study of Violence and Reconciliation, media reports. CSO data: civil society databases, archival research.
+  </text>
+  <text x="80" y="795" class="figure-caption">
+    Note: Bar height indicates intensity; width indicates duration. Dashed arrows show causal relationships between violence events and civil society responses.
+  </text>
+</svg>

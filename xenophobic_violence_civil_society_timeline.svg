@@ -1,0 +1,288 @@
+<!-- Xenophobic Violence & Civil Society Response Timeline (1994-2025) -->
+<!-- Landscape A4 format: 842 x 595 pixels at 72 DPI -->
+<svg width="842" height="595" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595">
+  <defs>
+    <style>
+      /* Typography - Clean, professional sans-serif */
+      .main-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 18px; font-weight: bold; fill: #000000; }
+      .phase-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #ffffff; }
+      .category-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-weight: 500; fill: #000000; }
+      .event-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 8px; fill: #000000; }
+      .event-year { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 7px; font-weight: bold; fill: #000000; }
+      .trend-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-style: italic; fill: #333333; }
+      
+      /* Phase background colors */
+      .sporadic-violence { fill: #a8d5a8; fill-opacity: 0.3; }
+      .systematic-violence { fill: #ffd480; fill-opacity: 0.3; }
+      .institutional-mobilisation { fill: #ffb3b3; fill-opacity: 0.3; }
+      
+      /* Event box colors */
+      .violence-box { fill: #cc3333; stroke: #cc3333; stroke-width: 1; }
+      .civil-society-box { fill: #4d804d; stroke: #4d804d; stroke-width: 1; }
+      
+      /* Lines and structure */
+      .phase-divider { stroke: #666666; stroke-width: 1; stroke-dasharray: 3,3; }
+      .swim-lane-line { stroke: #cccccc; stroke-width: 0.5; }
+      .timeline-line { stroke: #333333; stroke-width: 2; }
+      .trend-arrow { stroke: #666666; stroke-width: 1.5; fill: none; }
+    </style>
+    
+    <!-- Arrow markers -->
+    <marker id="timeline-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#333333"/>
+    </marker>
+    
+    <marker id="trend-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="842" height="595" fill="white"/>
+  
+  <!-- Main title -->
+  <text x="421" y="25" class="main-title" text-anchor="middle">Xenophobic Violence &amp; Civil Society Response Timeline (1994-2025)</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(50, 50)">
+    
+    <!-- Phase backgrounds -->
+    <g id="phase-backgrounds">
+      <!-- Sporadic Violence Era (1994-2008) -->
+      <rect x="0" y="0" width="280" height="380" class="sporadic-violence"/>
+      
+      <!-- Systematic Violence (2008-2020) -->
+      <rect x="280" y="0" width="240" height="380" class="systematic-violence"/>
+      
+      <!-- Institutional Mobilisation (2020-2025) -->
+      <rect x="520" y="0" width="222" height="380" class="institutional-mobilisation"/>
+    </g>
+    
+    <!-- Phase divider lines -->
+    <g id="phase-dividers">
+      <line x1="280" y1="0" x2="280" y2="380" class="phase-divider"/>
+      <line x1="520" y1="0" x2="520" y2="380" class="phase-divider"/>
+    </g>
+    
+    <!-- Phase titles -->
+    <g id="phase-titles">
+      <!-- Sporadic Violence Era -->
+      <rect x="10" y="10" width="120" height="20" fill="#2d5a2d" rx="3"/>
+      <text x="70" y="22" class="phase-title" text-anchor="middle">Sporadic Violence Era</text>
+      
+      <!-- Systematic Violence -->
+      <rect x="300" y="10" width="110" height="20" fill="#cc6600" rx="3"/>
+      <text x="355" y="22" class="phase-title" text-anchor="middle">Systematic Violence</text>
+      
+      <!-- Institutional Mobilisation -->
+      <rect x="540" y="10" width="130" height="20" fill="#cc3333" rx="3"/>
+      <text x="605" y="22" class="phase-title" text-anchor="middle">Institutional Mobilisation</text>
+    </g>
+    
+    <!-- Year markers at top -->
+    <g id="year-markers" transform="translate(0, 40)">
+      <text x="0" y="0" class="year-label" text-anchor="middle">1994</text>
+      <text x="70" y="0" class="year-label" text-anchor="middle">2000</text>
+      <text x="140" y="0" class="year-label" text-anchor="middle">2005</text>
+      <text x="280" y="0" class="year-label" text-anchor="middle">2008</text>
+      <text x="380" y="0" class="year-label" text-anchor="middle">2015</text>
+      <text x="520" y="0" class="year-label" text-anchor="middle">2020</text>
+      <text x="620" y="0" class="year-label" text-anchor="middle">2023</text>
+      <text x="680" y="0" class="year-label" text-anchor="middle">2025</text>
+      <text x="742" y="0" class="year-label" text-anchor="middle">Present</text>
+    </g>
+    
+    <!-- Swim lane dividers -->
+    <g id="swim-lanes" transform="translate(0, 60)">
+      <line x1="0" y1="150" x2="742" y2="150" class="swim-lane-line"/>
+    </g>
+    
+    <!-- Category labels -->
+    <g id="category-labels" transform="translate(-40, 60)">
+      <text x="0" y="75" class="category-label" text-anchor="end">Xenophobic Violence</text>
+      <text x="0" y="87" class="category-label" text-anchor="end">&amp; Mobilisation</text>
+      
+      <text x="0" y="225" class="category-label" text-anchor="end">Civil Society</text>
+      <text x="0" y="237" class="category-label" text-anchor="end">Counter-Mobilisation</text>
+    </g>
+    
+    <!-- Events -->
+    <g id="events" transform="translate(0, 60)">
+      
+      <!-- Xenophobic Violence & Mobilisation (Top Lane) -->
+      <!-- 1994: Alexandra attacks -->
+      <rect x="5" y="20" width="55" height="25" class="violence-box" rx="3"/>
+      <text x="32" y="30" class="event-year" text-anchor="middle" fill="white">1994</text>
+      <text x="32" y="40" class="event-label" text-anchor="middle" fill="white">Alexandra</text>
+      
+      <!-- 1995: Buyelekhaya campaign -->
+      <rect x="20" y="55" width="65" height="30" class="violence-box" rx="3"/>
+      <text x="52" y="65" class="event-year" text-anchor="middle" fill="white">1995</text>
+      <text x="52" y="75" class="event-label" text-anchor="middle" fill="white">Buyelekhaya</text>
+      <text x="52" y="83" class="event-label" text-anchor="middle" fill="white">Campaign</text>
+      
+      <!-- 1998: Train incidents -->
+      <rect x="70" y="20" width="55" height="30" class="violence-box" rx="3"/>
+      <text x="97" y="30" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="97" y="40" class="event-label" text-anchor="middle" fill="white">Train</text>
+      <text x="97" y="48" class="event-label" text-anchor="middle" fill="white">Incidents</text>
+      
+      <!-- 2000: Cape Flats killings -->
+      <rect x="90" y="55" width="65" height="30" class="violence-box" rx="3"/>
+      <text x="122" y="65" class="event-year" text-anchor="middle" fill="white">2000</text>
+      <text x="122" y="75" class="event-label" text-anchor="middle" fill="white">Cape Flats</text>
+      <text x="122" y="83" class="event-label" text-anchor="middle" fill="white">Killings</text>
+      
+      <!-- 2001: Zandspruit violence -->
+      <rect x="140" y="20" width="65" height="30" class="violence-box" rx="3"/>
+      <text x="172" y="30" class="event-year" text-anchor="middle" fill="white">2001</text>
+      <text x="172" y="40" class="event-label" text-anchor="middle" fill="white">Zandspruit</text>
+      <text x="172" y="48" class="event-label" text-anchor="middle" fill="white">Violence</text>
+      
+      <!-- 2005: Olievenhoutbosch violence -->
+      <rect x="170" y="55" width="85" height="30" class="violence-box" rx="3"/>
+      <text x="212" y="65" class="event-year" text-anchor="middle" fill="white">2005</text>
+      <text x="212" y="75" class="event-label" text-anchor="middle" fill="white">Olievenhoutbosch</text>
+      <text x="212" y="83" class="event-label" text-anchor="middle" fill="white">Violence</text>
+      
+      <!-- 2006-2007: Somali trader killings -->
+      <rect x="210" y="20" width="80" height="30" class="violence-box" rx="3"/>
+      <text x="250" y="30" class="event-year" text-anchor="middle" fill="white">2006-07</text>
+      <text x="250" y="40" class="event-label" text-anchor="middle" fill="white">Somali Trader</text>
+      <text x="250" y="48" class="event-label" text-anchor="middle" fill="white">Killings</text>
+      
+      <!-- 2008: Nationwide pogrom (62 dead) -->
+      <rect x="290" y="20" width="85" height="40" class="violence-box" rx="3"/>
+      <text x="332" y="32" class="event-year" text-anchor="middle" fill="white">2008</text>
+      <text x="332" y="42" class="event-label" text-anchor="middle" fill="white">Nationwide</text>
+      <text x="332" y="50" class="event-label" text-anchor="middle" fill="white">Pogrom</text>
+      <text x="332" y="58" class="event-label" text-anchor="middle" fill="white">(62 dead)</text>
+      
+      <!-- 2015: Durban & Johannesburg attacks -->
+      <rect x="370" y="65" width="85" height="30" class="violence-box" rx="3"/>
+      <text x="412" y="75" class="event-year" text-anchor="middle" fill="white">2015</text>
+      <text x="412" y="85" class="event-label" text-anchor="middle" fill="white">Durban &amp; JHB</text>
+      <text x="412" y="93" class="event-label" text-anchor="middle" fill="white">Attacks</text>
+      
+      <!-- 2019: Johannesburg/Pretoria violence -->
+      <rect x="420" y="20" width="90" height="40" class="violence-box" rx="3"/>
+      <text x="465" y="32" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="465" y="42" class="event-label" text-anchor="middle" fill="white">Johannesburg/</text>
+      <text x="465" y="50" class="event-label" text-anchor="middle" fill="white">Pretoria</text>
+      <text x="465" y="58" class="event-label" text-anchor="middle" fill="white">Violence</text>
+      
+      <!-- 2021: Operation Dudula launch -->
+      <rect x="530" y="20" width="80" height="30" class="violence-box" rx="3"/>
+      <text x="570" y="30" class="event-year" text-anchor="middle" fill="white">2021</text>
+      <text x="570" y="40" class="event-label" text-anchor="middle" fill="white">Op. Dudula</text>
+      <text x="570" y="48" class="event-label" text-anchor="middle" fill="white">Launch</text>
+      
+      <!-- 2022: Dudula expansion -->
+      <rect x="550" y="55" width="75" height="30" class="violence-box" rx="3"/>
+      <text x="587" y="65" class="event-year" text-anchor="middle" fill="white">2022</text>
+      <text x="587" y="75" class="event-label" text-anchor="middle" fill="white">Dudula</text>
+      <text x="587" y="83" class="event-label" text-anchor="middle" fill="white">Expansion</text>
+      
+      <!-- 2023: Dudula political party -->
+      <rect x="620" y="20" width="80" height="30" class="violence-box" rx="3"/>
+      <text x="660" y="30" class="event-year" text-anchor="middle" fill="white">2023</text>
+      <text x="660" y="40" class="event-label" text-anchor="middle" fill="white">Dudula</text>
+      <text x="660" y="48" class="event-label" text-anchor="middle" fill="white">Political Party</text>
+      
+      <!-- 2025: School targeting -->
+      <rect x="660" y="55" width="70" height="30" class="violence-box" rx="3"/>
+      <text x="695" y="65" class="event-year" text-anchor="middle" fill="white">2025</text>
+      <text x="695" y="75" class="event-label" text-anchor="middle" fill="white">School</text>
+      <text x="695" y="83" class="event-label" text-anchor="middle" fill="white">Targeting</text>
+      
+      <!-- Civil Society Counter-Mobilisation (Bottom Lane) -->
+      <!-- 1998: Roll Back Xenophobia launch -->
+      <rect x="70" y="170" width="75" height="30" class="civil-society-box" rx="3"/>
+      <text x="107" y="180" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="107" y="190" class="event-label" text-anchor="middle" fill="white">Roll Back</text>
+      <text x="107" y="198" class="event-label" text-anchor="middle" fill="white">Xenophobia</text>
+      
+      <!-- 2001: Community dialogues -->
+      <rect x="140" y="205" width="75" height="30" class="civil-society-box" rx="3"/>
+      <text x="177" y="215" class="event-year" text-anchor="middle" fill="white">2001</text>
+      <text x="177" y="225" class="event-label" text-anchor="middle" fill="white">Community</text>
+      <text x="177" y="233" class="event-label" text-anchor="middle" fill="white">Dialogues</text>
+      
+      <!-- 2008: Mandela Foundation dialogues -->
+      <rect x="290" y="170" width="85" height="30" class="civil-society-box" rx="3"/>
+      <text x="332" y="180" class="event-year" text-anchor="middle" fill="white">2008</text>
+      <text x="332" y="190" class="event-label" text-anchor="middle" fill="white">Mandela Found.</text>
+      <text x="332" y="198" class="event-label" text-anchor="middle" fill="white">Dialogues</text>
+      
+      <!-- 2009: ONE Movement -->
+      <rect x="310" y="205" width="65" height="25" class="civil-society-box" rx="3"/>
+      <text x="342" y="215" class="event-year" text-anchor="middle" fill="white">2009</text>
+      <text x="342" y="225" class="event-label" text-anchor="middle" fill="white">ONE Movement</text>
+      
+      <!-- 2010: Social Cohesion findings -->
+      <rect x="320" y="235" width="85" height="30" class="civil-society-box" rx="3"/>
+      <text x="362" y="245" class="event-year" text-anchor="middle" fill="white">2010</text>
+      <text x="362" y="255" class="event-label" text-anchor="middle" fill="white">Social Cohesion</text>
+      <text x="362" y="263" class="event-label" text-anchor="middle" fill="white">Findings</text>
+      
+      <!-- 2016: Xenowatch launch -->
+      <rect x="380" y="170" width="70" height="30" class="civil-society-box" rx="3"/>
+      <text x="415" y="180" class="event-year" text-anchor="middle" fill="white">2016</text>
+      <text x="415" y="190" class="event-label" text-anchor="middle" fill="white">Xenowatch</text>
+      <text x="415" y="198" class="event-label" text-anchor="middle" fill="white">Launch</text>
+      
+      <!-- 2017: LHR Constitutional Court case -->
+      <rect x="390" y="205" width="90" height="30" class="civil-society-box" rx="3"/>
+      <text x="435" y="215" class="event-year" text-anchor="middle" fill="white">2017</text>
+      <text x="435" y="225" class="event-label" text-anchor="middle" fill="white">LHR ConCourt</text>
+      <text x="435" y="233" class="event-label" text-anchor="middle" fill="white">Case</text>
+      
+      <!-- 2019: Greenmarket Square sit-in -->
+      <rect x="460" y="170" width="85" height="30" class="civil-society-box" rx="3"/>
+      <text x="502" y="180" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="502" y="190" class="event-label" text-anchor="middle" fill="white">Greenmarket</text>
+      <text x="502" y="198" class="event-label" text-anchor="middle" fill="white">Sit-in</text>
+      
+      <!-- 2022: KAAX coalition -->
+      <rect x="550" y="170" width="65" height="25" class="civil-society-box" rx="3"/>
+      <text x="582" y="180" class="event-year" text-anchor="middle" fill="white">2022</text>
+      <text x="582" y="190" class="event-label" text-anchor="middle" fill="white">KAAX Coalition</text>
+      
+      <!-- 2023: HSF/CoRMSA ZEP litigation -->
+      <rect x="570" y="205" width="95" height="30" class="civil-society-box" rx="3"/>
+      <text x="617" y="215" class="event-year" text-anchor="middle" fill="white">2023</text>
+      <text x="617" y="225" class="event-label" text-anchor="middle" fill="white">HSF/CoRMSA</text>
+      <text x="617" y="233" class="event-label" text-anchor="middle" fill="white">ZEP Litigation</text>
+      
+      <!-- 2024: Solidarity pickets -->
+      <rect x="630" y="170" width="75" height="30" class="civil-society-box" rx="3"/>
+      <text x="667" y="180" class="event-year" text-anchor="middle" fill="white">2024</text>
+      <text x="667" y="190" class="event-label" text-anchor="middle" fill="white">Solidarity</text>
+      <text x="667" y="198" class="event-label" text-anchor="middle" fill="white">Pickets</text>
+      
+      <!-- 2025: SERI support actions -->
+      <rect x="670" y="205" width="70" height="30" class="civil-society-box" rx="3"/>
+      <text x="705" y="215" class="event-year" text-anchor="middle" fill="white">2025</text>
+      <text x="705" y="225" class="event-label" text-anchor="middle" fill="white">SERI Support</text>
+      <text x="705" y="233" class="event-label" text-anchor="middle" fill="white">Actions</text>
+    </g>
+    
+    <!-- Timeline arrow at bottom -->
+    <g id="timeline" transform="translate(0, 440)">
+      <line x1="0" y1="0" x2="742" y2="0" class="timeline-line" marker-end="url(#timeline-arrow)"/>
+    </g>
+    
+    <!-- Trend analysis arrow -->
+    <g id="trend-analysis" transform="translate(0, 470)">
+      <path d="M 50,0 Q 250,25 450,35 Q 550,40 650,45" class="trend-arrow" marker-end="url(#trend-arrow)"/>
+      <text x="50" y="-5" class="trend-label">Sporadic Individual Incidents</text>
+      <text x="480" y="60" class="trend-label">Organized Political Mobilisation</text>
+    </g>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="50" y="570" class="event-label" fill="#666666">
+    Escalation: From Sporadic Violence to Organized Political Mobilisation, with parallel growth in civil society counter-responses
+  </text>
+</svg>

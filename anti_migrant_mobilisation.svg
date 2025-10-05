@@ -1,0 +1,248 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .main-title { font-family: 'Arial', sans-serif; font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Arial', sans-serif; font-size: 14px; fill: #666; }
+      .year-label { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: 600; fill: #333; }
+      .event-title { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: 600; fill: #C1292E; }
+      .event-detail { font-family: 'Arial', sans-serif; font-size: 11px; fill: #4a4a4a; }
+      .impact-text { font-family: 'Arial', sans-serif; font-size: 12px; fill: #fff; font-weight: 500; }
+      .timeline-axis { stroke: #666; stroke-width: 2; }
+      .violence-bar { fill: #C1292E; }
+      .violence-severe { fill: #8B0000; }
+      .violence-moderate { fill: #DC143C; }
+      .violence-sporadic { fill: #FA8072; }
+      .organized-movement { fill: #FF6B6B; }
+    </style>
+    
+    <!-- Gradient for intensity -->
+    <linearGradient id="violenceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C1292E;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <!-- Pattern for organized movements -->
+    <pattern id="diagonalStripes" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#FF6B6B"/>
+      <path d="M0,10 L10,0" stroke="#C1292E" stroke-width="2"/>
+    </pattern>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Pulse animation for critical events -->
+    <style>
+      @keyframes pulse {
+        0% { r: 8; opacity: 1; }
+        50% { r: 12; opacity: 0.7; }
+        100% { r: 8; opacity: 1; }
+      }
+      .critical-event {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f5f5f5"/>
+  
+  <!-- Title Section -->
+  <text x="600" y="40" text-anchor="middle" class="main-title">Anti-Migrant Mobilisation & Violence in South Africa</text>
+  <text x="600" y="65" text-anchor="middle" class="subtitle">Patterns of Xenophobic Violence and Organized Movements (1994-2025)</text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 100)">
+    <text x="0" y="0" class="event-title">Violence Intensity Scale:</text>
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="20" height="15" class="violence-sporadic"/>
+      <text x="25" y="12" class="event-detail">Sporadic Attacks</text>
+      
+      <rect x="150" y="0" width="20" height="15" class="violence-moderate"/>
+      <text x="175" y="12" class="event-detail">Moderate Violence</text>
+      
+      <rect x="300" y="0" width="20" height="15" class="violence-severe"/>
+      <text x="325" y="12" class="event-detail">Severe Violence/Pogroms</text>
+      
+      <rect x="480" y="0" width="20" height="15" fill="url(#diagonalStripes)"/>
+      <text x="505" y="12" class="event-detail">Organized Movements</text>
+    </g>
+  </g>
+  
+  <!-- Main Visualization Area -->
+  <g id="main-viz" transform="translate(100, 200)">
+    <!-- Timeline axis -->
+    <line x1="0" y1="400" x2="1000" y2="400" class="timeline-axis"/>
+    
+    <!-- Year markers -->
+    <g id="year-markers">
+      <!-- 1994 -->
+      <g transform="translate(0, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">1994</text>
+      </g>
+      
+      <!-- 2000 -->
+      <g transform="translate(240, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2000</text>
+      </g>
+      
+      <!-- 2005 -->
+      <g transform="translate(400, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2005</text>
+      </g>
+      
+      <!-- 2008 -->
+      <g transform="translate(480, 400)">
+        <line x1="0" y1="-10" x2="0" y2="10" stroke="#8B0000" stroke-width="3"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label" fill="#8B0000">2008</text>
+      </g>
+      
+      <!-- 2010 -->
+      <g transform="translate(560, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2010</text>
+      </g>
+      
+      <!-- 2015 -->
+      <g transform="translate(720, 400)">
+        <line x1="0" y1="-10" x2="0" y2="10" stroke="#DC143C" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2015</text>
+      </g>
+      
+      <!-- 2019 -->
+      <g transform="translate(880, 400)">
+        <line x1="0" y1="-10" x2="0" y2="10" stroke="#DC143C" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2019</text>
+      </g>
+      
+      <!-- 2021 -->
+      <g transform="translate(960, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2021</text>
+      </g>
+      
+      <!-- 2025 -->
+      <g transform="translate(1000, 400)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#666" stroke-width="2"/>
+        <text x="0" y="20" text-anchor="middle" class="year-label">2025</text>
+      </g>
+    </g>
+    
+    <!-- Violence Events Visualization -->
+    <!-- Early Sporadic Attacks 1994-2007 -->
+    <g id="early-attacks">
+      <rect x="0" y="350" width="480" height="50" class="violence-sporadic" opacity="0.3"/>
+      <text x="240" y="340" text-anchor="middle" class="event-title">Early Sporadic Attacks (1994-2007)</text>
+      
+      <!-- Individual incident markers -->
+      <circle cx="40" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="100" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="160" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="220" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="280" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="340" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="400" cy="375" r="4" class="violence-sporadic"/>
+      <circle cx="440" cy="375" r="4" class="violence-sporadic"/>
+      
+      <text x="240" y="365" text-anchor="middle" class="event-detail">Isolated incidents in townships</text>
+    </g>
+    
+    <!-- 2008 Xenophobic Pogrom -->
+    <g id="pogrom-2008" transform="translate(480, 0)">
+      <rect x="-20" y="200" width="40" height="200" fill="url(#violenceGradient)" filter="url(#dropShadow)"/>
+      <circle cx="0" cy="190" r="12" class="violence-severe critical-event"/>
+      
+      <!-- Impact visualization -->
+      <g transform="translate(-80, 150)">
+        <rect x="0" y="0" width="160" height="100" fill="#8B0000" opacity="0.9" rx="5" filter="url(#dropShadow)"/>
+        <text x="80" y="25" text-anchor="middle" class="impact-text" font-size="14">2008 POGROM</text>
+        <text x="80" y="45" text-anchor="middle" class="impact-text">62 Deaths</text>
+        <text x="80" y="60" text-anchor="middle" class="impact-text">100,000+ Displaced</text>
+        <text x="80" y="75" text-anchor="middle" class="impact-text">Nationwide Violence</text>
+        <text x="80" y="90" text-anchor="middle" class="impact-text" font-size="10">11 May - June</text>
+      </g>
+      
+      <!-- Spread indicators -->
+      <path d="M 0,200 L -100,100 L -150,100" stroke="#8B0000" stroke-width="1" fill="none" stroke-dasharray="2,2"/>
+      <path d="M 0,200 L 100,120 L 150,120" stroke="#8B0000" stroke-width="1" fill="none" stroke-dasharray="2,2"/>
+      <text x="-150" y="95" class="event-detail">Gauteng</text>
+      <text x="150" y="115" class="event-detail">W. Cape</text>
+    </g>
+    
+    <!-- 2015 Violence -->
+    <g id="violence-2015" transform="translate(720, 0)">
+      <rect x="-15" y="300" width="30" height="100" class="violence-moderate" filter="url(#dropShadow)"/>
+      <circle cx="0" cy="290" r="8" class="violence-moderate"/>
+      
+      <g transform="translate(-60, 250)">
+        <rect x="0" y="0" width="120" height="60" fill="#DC143C" opacity="0.8" rx="3"/>
+        <text x="60" y="20" text-anchor="middle" class="impact-text">2015 Violence</text>
+        <text x="60" y="35" text-anchor="middle" class="impact-text" font-size="10">7 Deaths</text>
+        <text x="60" y="50" text-anchor="middle" class="impact-text" font-size="10">KZN & Gauteng</text>
+      </g>
+    </g>
+    
+    <!-- 2019 Violence -->
+    <g id="violence-2019" transform="translate(880, 0)">
+      <rect x="-15" y="300" width="30" height="100" class="violence-moderate" filter="url(#dropShadow)"/>
+      <circle cx="0" cy="290" r="8" class="violence-moderate"/>
+      
+      <g transform="translate(-60, 250)">
+        <rect x="0" y="0" width="120" height="60" fill="#DC143C" opacity="0.8" rx="3"/>
+        <text x="60" y="20" text-anchor="middle" class="impact-text">2019 Violence</text>
+        <text x="60" y="35" text-anchor="middle" class="impact-text" font-size="10">12 Deaths</text>
+        <text x="60" y="50" text-anchor="middle" class="impact-text" font-size="10">Johannesburg</text>
+      </g>
+    </g>
+    
+    <!-- Operation Dudula 2021-2025 -->
+    <g id="operation-dudula" transform="translate(960, 0)">
+      <rect x="0" y="320" width="40" height="80" fill="url(#diagonalStripes)" filter="url(#dropShadow)"/>
+      
+      <g transform="translate(-70, 280)">
+        <rect x="0" y="0" width="180" height="80" fill="#FF6B6B" opacity="0.9" rx="3" filter="url(#dropShadow)"/>
+        <text x="90" y="20" text-anchor="middle" class="event-title">Operation Dudula</text>
+        <text x="90" y="35" text-anchor="middle" class="event-detail">Organized anti-migrant</text>
+        <text x="90" y="48" text-anchor="middle" class="event-detail">movement (2021-2025)</text>
+        <text x="90" y="65" text-anchor="middle" class="event-detail" font-weight="600">Vigilante actions</text>
+      </g>
+    </g>
+    
+    <!-- Intensity Graph -->
+    <g id="intensity-graph" transform="translate(0, 50)">
+      <text x="0" y="-10" class="event-title">Violence Intensity Over Time</text>
+      
+      <!-- Graph area -->
+      <path d="M 0,100 L 100,95 L 200,95 L 300,90 L 400,92 L 480,10 L 560,80 L 640,85 L 720,50 L 800,85 L 880,50 L 960,60 L 1000,60" 
+            stroke="#C1292E" stroke-width="2" fill="none"/>
+      <path d="M 0,100 L 100,95 L 200,95 L 300,90 L 400,92 L 480,10 L 560,80 L 640,85 L 720,50 L 800,85 L 880,50 L 960,60 L 1000,60 L 1000,100 Z" 
+            fill="#C1292E" opacity="0.2"/>
+    </g>
+  </g>
+  
+  <!-- Key Statistics Panel -->
+  <g id="statistics" transform="translate(100, 650)">
+    <rect x="0" y="0" width="1000" height="120" fill="#fff" stroke="#C1292E" stroke-width="2" rx="5" filter="url(#dropShadow)"/>
+    
+    <text x="20" y="25" class="event-title">Key Impact Statistics:</text>
+    
+    <g transform="translate(20, 40)">
+      <text x="0" y="15" class="event-detail">• Total documented deaths from xenophobic violence (1994-2025): 200+</text>
+      <text x="0" y="35" class="event-detail">• Major displacement events: 2008 (100,000+), 2015 (5,000+), 2019 (3,000+)</text>
+      <text x="0" y="55" class="event-detail">• Shift from spontaneous violence to organized mobilisation post-2020</text>
+      <text x="0" y="75" class="event-detail">• Primary targets: Foreign nationals from African countries, especially Zimbabwe, Mozambique, Nigeria, Somalia</text>
+    </g>
+  </g>
+</svg>

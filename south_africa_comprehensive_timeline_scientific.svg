@@ -1,0 +1,306 @@
+<!-- South Africa Comprehensive Timeline - Scientific/Academic Style for A4 Landscape -->
+<!-- Dimensions: 297mm x 210mm at 300 DPI = 3508 x 2480 pixels -->
+<!-- Using 1190 x 842 for web display (proportional to A4 landscape) -->
+<svg width="1190" height="842" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 842">
+  <defs>
+    <style>
+      /* Academic Typography - Sans-serif, minimal */
+      .figure-title { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; fill: #000000; }
+      .figure-caption { font-family: Arial, Helvetica, sans-serif; font-size: 10px; fill: #333333; }
+      .axis-label { font-family: Arial, Helvetica, sans-serif; font-size: 9px; fill: #333333; }
+      .year-label { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #000000; }
+      .event-label { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      .category-label { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .legend-text { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      
+      /* Scientific Color Palette - ColorBrewer Set2 (colorblind-safe) */
+      .migration-law { fill: #66c2a5; stroke: #66c2a5; }
+      .anti-migrant { fill: #fc8d62; stroke: #fc8d62; }
+      .anti-poor { fill: #8da0cb; stroke: #8da0cb; }
+      .pro-poor { fill: #e78ac3; stroke: #e78ac3; }
+      .cso-counter { fill: #a6d854; stroke: #a6d854; }
+      
+      /* Grid and Structure */
+      .grid-line { stroke: #e0e0e0; stroke-width: 0.5; }
+      .axis-line { stroke: #333333; stroke-width: 1; }
+      .swim-lane-divider { stroke: #cccccc; stroke-width: 0.5; stroke-dasharray: 2,2; }
+      .reference-line { stroke: #999999; stroke-width: 0.5; stroke-dasharray: 1,1; }
+      
+      /* Event markers */
+      .event-marker { stroke-width: 1; }
+      .leader-line { stroke: #999999; stroke-width: 0.5; fill: none; }
+    </style>
+    
+    <!-- Arrowhead marker for timeline -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333333"/>
+    </marker>
+    
+    <!-- Pattern for density visualization -->
+    <pattern id="density-pattern" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="white"/>
+      <circle cx="2" cy="2" r="0.5" fill="#666666" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- White background with margins -->
+  <rect width="1190" height="842" fill="white"/>
+  
+  <!-- Figure title and number -->
+  <text x="60" y="40" class="figure-title">Figure 1: Temporal Distribution of Migration Policy and Social Mobilisation Events in South Africa (1993-2025)</text>
+  
+  <!-- Main visualization area with margins -->
+  <g id="main-chart" transform="translate(60, 80)">
+    
+    <!-- Background grid -->
+    <g id="grid">
+      <!-- Vertical grid lines (5-year intervals) -->
+      <line x1="0" y1="0" x2="0" y2="600" class="grid-line"/>
+      <line x1="160" y1="0" x2="160" y2="600" class="grid-line"/>
+      <line x1="320" y1="0" x2="320" y2="600" class="grid-line"/>
+      <line x1="480" y1="0" x2="480" y2="600" class="grid-line"/>
+      <line x1="640" y1="0" x2="640" y2="600" class="grid-line"/>
+      <line x1="800" y1="0" x2="800" y2="600" class="grid-line"/>
+      <line x1="960" y1="0" x2="960" y2="600" class="grid-line"/>
+      <line x1="1070" y1="0" x2="1070" y2="600" class="grid-line"/>
+    </g>
+    
+    <!-- Swim lanes for categories -->
+    <g id="swim-lanes">
+      <!-- Migration & Asylum Law lane -->
+      <rect x="0" y="0" width="1070" height="115" fill="#66c2a5" opacity="0.05"/>
+      <line x1="0" y1="115" x2="1070" y2="115" class="swim-lane-divider"/>
+      
+      <!-- Anti-migrant mobilisation lane -->
+      <rect x="0" y="115" width="1070" height="115" fill="#fc8d62" opacity="0.05"/>
+      <line x1="0" y1="230" x2="1070" y2="230" class="swim-lane-divider"/>
+      
+      <!-- Anti-Poor Policies lane -->
+      <rect x="0" y="230" width="1070" height="115" fill="#8da0cb" opacity="0.05"/>
+      <line x1="0" y1="345" x2="1070" y2="345" class="swim-lane-divider"/>
+      
+      <!-- Pro-Poor Policies lane -->
+      <rect x="0" y="345" width="1070" height="115" fill="#e78ac3" opacity="0.05"/>
+      <line x1="0" y1="460" x2="1070" y2="460" class="swim-lane-divider"/>
+      
+      <!-- CSO counter-mobilisation lane -->
+      <rect x="0" y="460" width="1070" height="115" fill="#a6d854" opacity="0.05"/>
+      <line x1="0" y1="575" x2="1070" y2="575" class="swim-lane-divider"/>
+    </g>
+    
+    <!-- Category labels -->
+    <g id="category-labels">
+      <text x="-50" y="57" class="category-label" text-anchor="end">Migration Law</text>
+      <text x="-50" y="172" class="category-label" text-anchor="end">Anti-migrant</text>
+      <text x="-50" y="287" class="category-label" text-anchor="end">Anti-Poor</text>
+      <text x="-50" y="402" class="category-label" text-anchor="end">Pro-Poor</text>
+      <text x="-50" y="517" class="category-label" text-anchor="end">CSO Response</text>
+    </g>
+    
+    <!-- Events with smart positioning -->
+    <g id="events">
+      <!-- Migration & Asylum Law Events -->
+      <!-- 1993 - Citizenship Act -->
+      <circle cx="0" cy="57" r="4" class="migration-law event-marker"/>
+      <path d="M 5,57 L 20,35 L 60,35" class="leader-line"/>
+      <text x="62" y="38" class="event-label">Citizenship Act</text>
+      
+      <!-- 1998 - Refugees Act -->
+      <circle cx="100" cy="57" r="4" class="migration-law event-marker"/>
+      <path d="M 105,57 L 120,75 L 160,75" class="leader-line"/>
+      <text x="162" y="78" class="event-label">Refugees Act</text>
+      
+      <!-- 2002 - Immigration Act -->
+      <circle cx="180" cy="57" r="4" class="migration-law event-marker"/>
+      <path d="M 185,57 L 200,35 L 240,35" class="leader-line"/>
+      <text x="242" y="38" class="event-label">Immigration Act</text>
+      
+      <!-- 2014 - Immigration Amendment -->
+      <circle cx="420" cy="57" r="4" class="migration-law event-marker"/>
+      <text x="425" y="60" class="event-label" transform="rotate(-45, 425, 60)">Amendment</text>
+      
+      <!-- 2017 - White Paper -->
+      <circle cx="480" cy="57" r="4" class="migration-law event-marker"/>
+      <path d="M 485,57 L 500,75 L 540,75" class="leader-line"/>
+      <text x="542" y="78" class="event-label">White Paper</text>
+      
+      <!-- 2020 - BMA Act -->
+      <circle cx="540" cy="57" r="4" class="migration-law event-marker"/>
+      <path d="M 545,57 L 560,35 L 600,35" class="leader-line"/>
+      <text x="602" y="38" class="event-label">BMA Act</text>
+      
+      <!-- Anti-migrant mobilisation Events -->
+      <!-- 1994-1995 Early incidents -->
+      <rect x="10" y="160" width="20" height="8" class="anti-migrant" opacity="0.3"/>
+      <text x="35" y="165" class="event-label">Early incidents</text>
+      
+      <!-- 1998 ROAR campaign -->
+      <rect x="100" y="150" width="15" height="15" class="anti-migrant" opacity="0.6"/>
+      <text x="120" y="158" class="event-label">ROAR</text>
+      
+      <!-- 2008 May violence -->
+      <rect x="290" y="140" width="20" height="30" class="anti-migrant" opacity="1"/>
+      <path d="M 300,140 L 320,120 L 360,120" class="leader-line"/>
+      <text x="362" y="123" class="event-label">May 2008 attacks</text>
+      
+      <!-- 2015 Violence -->
+      <rect x="440" y="145" width="15" height="25" class="anti-migrant" opacity="0.8"/>
+      <text x="460" y="158" class="event-label">2015</text>
+      
+      <!-- 2019 Violence -->
+      <rect x="520" y="145" width="15" height="25" class="anti-migrant" opacity="0.8"/>
+      <text x="540" y="158" class="event-label">2019</text>
+      
+      <!-- Operation Dudula 2021-2025 -->
+      <rect x="570" y="135" width="500" height="40" class="anti-migrant" opacity="0.5"/>
+      <text x="620" y="158" class="event-label">Operation Dudula</text>
+      
+      <!-- Anti-Poor Policies -->
+      <!-- GEAR 1996 -->
+      <circle cx="60" cy="287" r="4" class="anti-poor event-marker"/>
+      <text x="65" y="275" class="event-label">GEAR</text>
+      
+      <!-- Water cut-offs 2000-2002 -->
+      <rect x="200" y="280" width="40" height="15" class="anti-poor" opacity="0.5"/>
+      <text x="245" y="288" class="event-label">Water cuts</text>
+      
+      <!-- Electricity cut-offs 2001-2003 -->
+      <rect x="220" y="265" width="40" height="15" class="anti-poor" opacity="0.5"/>
+      <text x="265" y="273" class="event-label">Elec. cuts</text>
+      
+      <!-- Evictions 2005-2010 -->
+      <rect x="320" y="275" width="160" height="20" class="anti-poor" opacity="0.4"/>
+      <text x="380" y="285" class="event-label">Mass evictions</text>
+      
+      <!-- Austerity 2015-2020 -->
+      <rect x="440" y="270" width="160" height="25" class="anti-poor" opacity="0.5"/>
+      <text x="500" y="283" class="event-label">Austerity measures</text>
+      
+      <!-- Pro-Poor Policies -->
+      <!-- RDP 1994 -->
+      <circle cx="10" cy="402" r="4" class="pro-poor event-marker"/>
+      <text x="15" y="390" class="event-label">RDP</text>
+      
+      <!-- Free water 2000 -->
+      <circle cx="200" cy="402" r="4" class="pro-poor event-marker"/>
+      <text x="205" y="415" class="event-label">Free water</text>
+      
+      <!-- Child grant expansion -->
+      <rect x="180" y="380" width="120" height="15" class="pro-poor" opacity="0.4"/>
+      <text x="220" y="388" class="event-label">Child grants</text>
+      
+      <!-- Social grants 2002-2020 -->
+      <rect x="240" y="395" width="480" height="20" class="pro-poor" opacity="0.3"/>
+      <text x="440" y="406" class="event-label">Social grant expansion</text>
+      
+      <!-- COVID grants 2020-2024 -->
+      <rect x="540" y="375" width="160" height="25" class="pro-poor" opacity="0.5"/>
+      <text x="590" y="388" class="event-label">COVID relief</text>
+      
+      <!-- CSO counter-mobilisation -->
+      <!-- TAC 1998 -->
+      <circle cx="100" cy="517" r="4" class="cso-counter event-marker"/>
+      <text x="105" y="505" class="event-label">TAC</text>
+      
+      <!-- APF 2000 -->
+      <circle cx="200" cy="517" r="4" class="cso-counter event-marker"/>
+      <text x="205" y="530" class="event-label">APF</text>
+      
+      <!-- LPM 2001 -->
+      <circle cx="220" cy="517" r="4" class="cso-counter event-marker"/>
+      <text x="225" y="505" class="event-label">LPM</text>
+      
+      <!-- Social movements 2005-2015 -->
+      <rect x="320" y="500" width="320" height="35" class="cso-counter" opacity="0.3"/>
+      <text x="450" y="520" class="event-label">Social movement mobilisation</text>
+      
+      <!-- Migrant support 2008-2025 -->
+      <rect x="290" y="535" width="780" height="20" class="cso-counter" opacity="0.2"/>
+      <text x="620" y="547" class="event-label">Migrant support networks</text>
+    </g>
+    
+    <!-- Density indicator at bottom -->
+    <g id="density-plot" transform="translate(0, 590)">
+      <text x="-50" y="15" class="category-label" text-anchor="end">Event Density</text>
+      <!-- Density bars -->
+      <rect x="0" y="5" width="20" height="15" fill="#666666" opacity="0.2"/>
+      <rect x="80" y="5" width="40" height="15" fill="#666666" opacity="0.4"/>
+      <rect x="180" y="5" width="60" height="15" fill="#666666" opacity="0.6"/>
+      <rect x="280" y="5" width="40" height="15" fill="#666666" opacity="0.8"/>
+      <rect x="420" y="5" width="60" height="15" fill="#666666" opacity="0.5"/>
+      <rect x="520" y="5" width="80" height="15" fill="#666666" opacity="0.7"/>
+    </g>
+    
+    <!-- Timeline axis -->
+    <g id="timeline-axis">
+      <line x1="0" y1="600" x2="1070" y2="600" class="axis-line" marker-end="url(#arrow)"/>
+      
+      <!-- Year labels -->
+      <text x="0" y="615" class="year-label" text-anchor="middle">1993</text>
+      <text x="80" y="615" class="year-label" text-anchor="middle">1995</text>
+      <text x="160" y="615" class="year-label" text-anchor="middle">1998</text>
+      <text x="240" y="615" class="year-label" text-anchor="middle">2000</text>
+      <text x="320" y="615" class="year-label" text-anchor="middle">2003</text>
+      <text x="400" y="615" class="year-label" text-anchor="middle">2005</text>
+      <text x="480" y="615" class="year-label" text-anchor="middle">2008</text>
+      <text x="560" y="615" class="year-label" text-anchor="middle">2010</text>
+      <text x="640" y="615" class="year-label" text-anchor="middle">2013</text>
+      <text x="720" y="615" class="year-label" text-anchor="middle">2015</text>
+      <text x="800" y="615" class="year-label" text-anchor="middle">2018</text>
+      <text x="880" y="615" class="year-label" text-anchor="middle">2020</text>
+      <text x="960" y="615" class="year-label" text-anchor="middle">2023</text>
+      <text x="1070" y="615" class="year-label" text-anchor="middle">2025</text>
+      
+      <!-- Period markers -->
+      <g id="period-markers">
+        <rect x="0" y="625" width="240" height="15" fill="#f0f0f0" stroke="#999999" stroke-width="0.5"/>
+        <text x="120" y="635" class="legend-text" text-anchor="middle">Post-apartheid transition</text>
+        
+        <rect x="240" y="625" width="240" height="15" fill="#e0e0e0" stroke="#999999" stroke-width="0.5"/>
+        <text x="360" y="635" class="legend-text" text-anchor="middle">Neoliberal consolidation</text>
+        
+        <rect x="480" y="625" width="160" height="15" fill="#f0f0f0" stroke="#999999" stroke-width="0.5"/>
+        <text x="560" y="635" class="legend-text" text-anchor="middle">Crisis period</text>
+        
+        <rect x="640" y="625" width="240" height="15" fill="#e0e0e0" stroke="#999999" stroke-width="0.5"/>
+        <text x="760" y="635" class="legend-text" text-anchor="middle">State capture era</text>
+        
+        <rect x="880" y="625" width="190" height="15" fill="#f0f0f0" stroke="#999999" stroke-width="0.5"/>
+        <text x="975" y="635" class="legend-text" text-anchor="middle">COVID-19 &amp; aftermath</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(60, 740)">
+    <text x="0" y="0" class="category-label">Legend:</text>
+    <g transform="translate(60, -5)">
+      <circle cx="5" cy="5" r="4" class="migration-law"/>
+      <text x="15" y="8" class="legend-text">Migration &amp; Asylum Law</text>
+    </g>
+    <g transform="translate(200, -5)">
+      <rect x="0" y="0" width="10" height="10" class="anti-migrant"/>
+      <text x="15" y="8" class="legend-text">Anti-migrant mobilisation</text>
+    </g>
+    <g transform="translate(350, -5)">
+      <circle cx="5" cy="5" r="4" class="anti-poor"/>
+      <text x="15" y="8" class="legend-text">Anti-Poor Policies</text>
+    </g>
+    <g transform="translate(470, -5)">
+      <circle cx="5" cy="5" r="4" class="pro-poor"/>
+      <text x="15" y="8" class="legend-text">Pro-Poor Policies</text>
+    </g>
+    <g transform="translate(590, -5)">
+      <circle cx="5" cy="5" r="4" class="cso-counter"/>
+      <text x="15" y="8" class="legend-text">CSO counter-mobilisation</text>
+    </g>
+  </g>
+  
+  <!-- Figure caption -->
+  <text x="60" y="780" class="figure-caption">
+    Data sources: South African legislation database, civil society reports, and academic literature. Event selection based on documented impact and policy significance.
+  </text>
+  <text x="60" y="795" class="figure-caption">
+    Note: Event positioning reflects temporal occurrence; vertical placement within lanes indicates relative significance. Opacity indicates duration and intensity of events.
+  </text>
+</svg>

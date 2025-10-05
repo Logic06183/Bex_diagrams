@@ -1,0 +1,261 @@
+<!-- South African Migration and Policy Timeline (1994-Present) -->
+<!-- Landscape A4 format: 842 x 595 pixels at 72 DPI -->
+<svg width="842" height="595" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595">
+  <defs>
+    <style>
+      /* Typography - Clean, professional sans-serif */
+      .main-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 18px; font-weight: bold; fill: #000000; }
+      .phase-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #ffffff; }
+      .category-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-weight: 500; fill: #000000; }
+      .event-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 8px; fill: #000000; }
+      .event-year { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 7px; font-weight: bold; fill: #000000; }
+      .trend-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-style: italic; fill: #333333; }
+      
+      /* Phase background colors */
+      .early-inclusive { fill: #a8d5a8; fill-opacity: 0.3; }
+      .transition-phase { fill: #ffd480; fill-opacity: 0.3; }
+      .exclusionary-phase { fill: #ffb3b3; fill-opacity: 0.3; }
+      
+      /* Event box colors matching phases */
+      .legal-framework { fill: #2d5a2d; stroke: #2d5a2d; stroke-width: 1; }
+      .anti-migrant-box { fill: #cc6600; stroke: #cc6600; stroke-width: 1; }
+      .civil-society-box { fill: #4d804d; stroke: #4d804d; stroke-width: 1; }
+      
+      /* Lines and structure */
+      .phase-divider { stroke: #666666; stroke-width: 1; stroke-dasharray: 3,3; }
+      .swim-lane-line { stroke: #cccccc; stroke-width: 0.5; }
+      .timeline-line { stroke: #333333; stroke-width: 2; }
+      .trend-arrow { stroke: #666666; stroke-width: 1.5; fill: none; }
+    </style>
+    
+    <!-- Arrow markers -->
+    <marker id="timeline-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#333333"/>
+    </marker>
+    
+    <marker id="trend-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="842" height="595" fill="white"/>
+  
+  <!-- Main title -->
+  <text x="421" y="25" class="main-title" text-anchor="middle">South African Migration and Healthcare Policy Timeline (1994-Present)</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(50, 50)">
+    
+    <!-- Phase backgrounds -->
+    <g id="phase-backgrounds">
+      <!-- Early Inclusive Phase (1994-2008) -->
+      <rect x="0" y="0" width="230" height="420" class="early-inclusive"/>
+      
+      <!-- Transition Phase (2008-2020) -->
+      <rect x="230" y="0" width="220" height="420" class="transition-phase"/>
+      
+      <!-- Exclusionary Phase (2020-Present) -->
+      <rect x="450" y="0" width="292" height="420" class="exclusionary-phase"/>
+    </g>
+    
+    <!-- Phase divider lines -->
+    <g id="phase-dividers">
+      <line x1="230" y1="0" x2="230" y2="420" class="phase-divider"/>
+      <line x1="450" y1="0" x2="450" y2="420" class="phase-divider"/>
+    </g>
+    
+    <!-- Phase titles -->
+    <g id="phase-titles">
+      <!-- Early Inclusive Phase -->
+      <rect x="10" y="10" width="100" height="20" fill="#2d5a2d" rx="3"/>
+      <text x="60" y="22" class="phase-title" text-anchor="middle">Early Inclusive Phase</text>
+      
+      <!-- Transition Phase -->
+      <rect x="280" y="10" width="80" height="20" fill="#cc6600" rx="3"/>
+      <text x="320" y="22" class="phase-title" text-anchor="middle">Transition Phase</text>
+      
+      <!-- Exclusionary Phase -->
+      <rect x="480" y="10" width="100" height="20" fill="#cc3333" rx="3"/>
+      <text x="530" y="22" class="phase-title" text-anchor="middle">Exclusionary Phase</text>
+    </g>
+    
+    <!-- Year markers at top -->
+    <g id="year-markers" transform="translate(0, 40)">
+      <text x="0" y="0" class="year-label" text-anchor="middle">1994</text>
+      <text x="93" y="0" class="year-label" text-anchor="middle">2000</text>
+      <text x="155" y="0" class="year-label" text-anchor="middle">2005</text>
+      <text x="230" y="0" class="year-label" text-anchor="middle">2008</text>
+      <text x="340" y="0" class="year-label" text-anchor="middle">2015</text>
+      <text x="450" y="0" class="year-label" text-anchor="middle">2020</text>
+      <text x="556" y="0" class="year-label" text-anchor="middle">2023</text>
+      <text x="680" y="0" class="year-label" text-anchor="middle">2025</text>
+      <text x="742" y="0" class="year-label" text-anchor="middle">Present</text>
+    </g>
+    
+    <!-- Swim lane dividers -->
+    <g id="swim-lanes" transform="translate(0, 60)">
+      <line x1="0" y1="100" x2="742" y2="100" class="swim-lane-line"/>
+      <line x1="0" y1="200" x2="742" y2="200" class="swim-lane-line"/>
+      <line x1="0" y1="300" x2="742" y2="300" class="swim-lane-line"/>
+    </g>
+    
+    <!-- Category labels -->
+    <g id="category-labels" transform="translate(-40, 60)">
+      <text x="0" y="50" class="category-label" text-anchor="end">Constitutional &amp;</text>
+      <text x="0" y="62" class="category-label" text-anchor="end">Legal Frameworks</text>
+      
+      <text x="0" y="150" class="category-label" text-anchor="end">Anti-Migrant</text>
+      <text x="0" y="162" class="category-label" text-anchor="end">Mobilisation</text>
+      
+      <text x="0" y="250" class="category-label" text-anchor="end">Civil Society &amp;</text>
+      <text x="0" y="262" class="category-label" text-anchor="end">Judicial Responses</text>
+    </g>
+    
+    <!-- Events -->
+    <g id="events" transform="translate(0, 60)">
+      
+      <!-- Constitutional & Legal Frameworks (Top Lane) -->
+      <!-- 1993: Restoration & Extension of SA Citizenship Act -->
+      <rect x="5" y="20" width="50" height="25" class="legal-framework" rx="3"/>
+      <text x="30" y="30" class="event-year" text-anchor="middle" fill="white">1993</text>
+      <text x="30" y="40" class="event-label" text-anchor="middle" fill="white">Citizenship Act</text>
+      
+      <!-- 1995: SA Citizenship Act 88 -->
+      <rect x="25" y="50" width="45" height="25" class="legal-framework" rx="3"/>
+      <text x="47" y="60" class="event-year" text-anchor="middle" fill="white">1995</text>
+      <text x="47" y="70" class="event-label" text-anchor="middle" fill="white">Act 88</text>
+      
+      <!-- 1998: Refugees Act 130 -->
+      <rect x="62" y="20" width="50" height="25" class="legal-framework" rx="3"/>
+      <text x="87" y="30" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="87" y="40" class="event-label" text-anchor="middle" fill="white">Refugees Act</text>
+      
+      <!-- 2000: Refugees Act commenced -->
+      <rect x="93" y="50" width="45" height="25" class="legal-framework" rx="3"/>
+      <text x="115" y="60" class="event-year" text-anchor="middle" fill="white">2000</text>
+      <text x="115" y="70" class="event-label" text-anchor="middle" fill="white">Commenced</text>
+      
+      <!-- 2002-2003: Immigration Act 13 -->
+      <rect x="140" y="20" width="55" height="25" class="legal-framework" rx="3"/>
+      <text x="167" y="30" class="event-year" text-anchor="middle" fill="white">2002-03</text>
+      <text x="167" y="40" class="event-label" text-anchor="middle" fill="white">Immigration</text>
+      
+      <!-- 2014: Immigration Regulations -->
+      <rect x="310" y="20" width="60" height="25" class="legal-framework" rx="3"/>
+      <text x="340" y="30" class="event-year" text-anchor="middle" fill="white">2014</text>
+      <text x="340" y="40" class="event-label" text-anchor="middle" fill="white">Regulations</text>
+      
+      <!-- 2017: White Paper -->
+      <rect x="350" y="50" width="55" height="25" class="legal-framework" rx="3"/>
+      <text x="377" y="60" class="event-year" text-anchor="middle" fill="white">2017</text>
+      <text x="377" y="70" class="event-label" text-anchor="middle" fill="white">White Paper</text>
+      
+      <!-- 2020-2022: BMA Act -->
+      <rect x="450" y="20" width="70" height="25" class="legal-framework" rx="3"/>
+      <text x="485" y="30" class="event-year" text-anchor="middle" fill="white">2020-22</text>
+      <text x="485" y="40" class="event-label" text-anchor="middle" fill="white">BMA Act</text>
+      
+      <!-- 2023: White Paper on Citizenship -->
+      <rect x="530" y="50" width="80" height="25" class="legal-framework" rx="3"/>
+      <text x="570" y="60" class="event-year" text-anchor="middle" fill="white">2023</text>
+      <text x="570" y="70" class="event-label" text-anchor="middle" fill="white">Citizenship Paper</text>
+      
+      <!-- 2024: BELA Act -->
+      <rect x="650" y="20" width="50" height="25" class="legal-framework" rx="3"/>
+      <text x="675" y="30" class="event-year" text-anchor="middle" fill="white">2024</text>
+      <text x="675" y="40" class="event-label" text-anchor="middle" fill="white">BELA Act</text>
+      
+      <!-- Anti-Migrant Mobilisation (Middle Lane) -->
+      <!-- 1994: Alexandra attacks -->
+      <rect x="5" y="120" width="50" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="30" y="130" class="event-year" text-anchor="middle" fill="white">1994</text>
+      <text x="30" y="140" class="event-label" text-anchor="middle" fill="white">Alexandra</text>
+      
+      <!-- 1995: Buyelekhaya campaign -->
+      <rect x="25" y="150" width="60" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="55" y="160" class="event-year" text-anchor="middle" fill="white">1995</text>
+      <text x="55" y="170" class="event-label" text-anchor="middle" fill="white">Buyelekhaya</text>
+      
+      <!-- 2008: Nationwide pogrom -->
+      <rect x="210" y="120" width="70" height="35" class="anti-migrant-box" rx="3"/>
+      <text x="245" y="133" class="event-year" text-anchor="middle" fill="white">2008</text>
+      <text x="245" y="145" class="event-label" text-anchor="middle" fill="white">Nationwide</text>
+      <text x="245" y="153" class="event-label" text-anchor="middle" fill="white">Pogrom</text>
+      
+      <!-- 2015: Durban & Johannesburg -->
+      <rect x="310" y="120" width="65" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="342" y="130" class="event-year" text-anchor="middle" fill="white">2015</text>
+      <text x="342" y="140" class="event-label" text-anchor="middle" fill="white">Durban/JHB</text>
+      
+      <!-- 2019: Violence -->
+      <rect x="390" y="150" width="50" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="415" y="160" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="415" y="170" class="event-label" text-anchor="middle" fill="white">Violence</text>
+      
+      <!-- 2021: Operation Dudula -->
+      <rect x="480" y="120" width="70" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="515" y="130" class="event-year" text-anchor="middle" fill="white">2021</text>
+      <text x="515" y="140" class="event-label" text-anchor="middle" fill="white">Op. Dudula</text>
+      
+      <!-- 2022-2025: Dudula expansion -->
+      <rect x="570" y="150" width="100" height="25" class="anti-migrant-box" rx="3"/>
+      <text x="620" y="160" class="event-year" text-anchor="middle" fill="white">2022-25</text>
+      <text x="620" y="170" class="event-label" text-anchor="middle" fill="white">Dudula Expansion</text>
+      
+      <!-- Civil Society & Judicial Responses (Bottom Lane) -->
+      <!-- 1998: Roll Back Xenophobia -->
+      <rect x="62" y="220" width="60" height="25" class="civil-society-box" rx="3"/>
+      <text x="92" y="230" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="92" y="240" class="event-label" text-anchor="middle" fill="white">Roll Back</text>
+      
+      <!-- 2008-2010: Social Cohesion -->
+      <rect x="210" y="250" width="80" height="25" class="civil-society-box" rx="3"/>
+      <text x="250" y="260" class="event-year" text-anchor="middle" fill="white">2008-10</text>
+      <text x="250" y="270" class="event-label" text-anchor="middle" fill="white">Soc. Cohesion</text>
+      
+      <!-- 2016: Xenowatch -->
+      <rect x="330" y="220" width="55" height="25" class="civil-society-box" rx="3"/>
+      <text x="357" y="230" class="event-year" text-anchor="middle" fill="white">2016</text>
+      <text x="357" y="240" class="event-label" text-anchor="middle" fill="white">Xenowatch</text>
+      
+      <!-- 2017: LHR v Minister -->
+      <rect x="360" y="250" width="70" height="25" class="civil-society-box" rx="3"/>
+      <text x="395" y="260" class="event-year" text-anchor="middle" fill="white">2017</text>
+      <text x="395" y="270" class="event-label" text-anchor="middle" fill="white">LHR v Min.</text>
+      
+      <!-- 2019: Greenmarket sit-in -->
+      <rect x="390" y="220" width="75" height="25" class="civil-society-box" rx="3"/>
+      <text x="427" y="230" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="427" y="240" class="event-label" text-anchor="middle" fill="white">Greenmarket</text>
+      
+      <!-- 2022: KAAX coalition -->
+      <rect x="500" y="220" width="65" height="25" class="civil-society-box" rx="3"/>
+      <text x="532" y="230" class="event-year" text-anchor="middle" fill="white">2022</text>
+      <text x="532" y="240" class="event-label" text-anchor="middle" fill="white">KAAX</text>
+      
+      <!-- 2023-2024: ZEP litigation -->
+      <rect x="580" y="250" width="85" height="25" class="civil-society-box" rx="3"/>
+      <text x="622" y="260" class="event-year" text-anchor="middle" fill="white">2023-24</text>
+      <text x="622" y="270" class="event-label" text-anchor="middle" fill="white">ZEP Litigation</text>
+    </g>
+    
+    <!-- Timeline arrow at bottom -->
+    <g id="timeline" transform="translate(0, 480)">
+      <line x1="0" y1="0" x2="742" y2="0" class="timeline-line" marker-end="url(#timeline-arrow)"/>
+    </g>
+    
+    <!-- Trend analysis arrow -->
+    <g id="trend-analysis" transform="translate(0, 510)">
+      <path d="M 50,0 Q 250,15 450,25 Q 550,30 650,35" class="trend-arrow" marker-end="url(#trend-arrow)"/>
+      <text x="50" y="-5" class="trend-label">Inclusive, Rights-Based Approach</text>
+      <text x="500" y="50" class="trend-label">Increasing Exclusion &amp; Securitization of Healthcare Access</text>
+    </g>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="50" y="570" class="event-label" fill="#666666">
+    Timeline shows progression from inclusive constitutional frameworks to exclusionary securitization of migration and healthcare access
+  </text>
+</svg>

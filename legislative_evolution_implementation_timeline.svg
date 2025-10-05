@@ -1,0 +1,263 @@
+<!-- Legislative Evolution & Implementation Timeline (1993-2024) -->
+<!-- Landscape A4 format: 842 x 595 pixels at 72 DPI -->
+<svg width="842" height="595" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595">
+  <defs>
+    <style>
+      /* Typography - Clean, professional sans-serif */
+      .main-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 18px; font-weight: bold; fill: #000000; }
+      .phase-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #ffffff; }
+      .category-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-weight: 500; fill: #000000; }
+      .event-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 8px; fill: #000000; }
+      .event-year { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 7px; font-weight: bold; fill: #000000; }
+      .trend-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-style: italic; fill: #333333; }
+      
+      /* Phase background colors */
+      .foundation-era { fill: #a8d5a8; fill-opacity: 0.3; }
+      .implementation-period { fill: #ffd480; fill-opacity: 0.3; }
+      .restriction-securitization { fill: #ffb3b3; fill-opacity: 0.3; }
+      
+      /* Event box colors */
+      .legislation-box { fill: #2d5a87; stroke: #2d5a87; stroke-width: 1; }
+      .implementation-box { fill: #cc6600; stroke: #cc6600; stroke-width: 1; }
+      .court-box { fill: #4d804d; stroke: #4d804d; stroke-width: 1; }
+      
+      /* Lines and structure */
+      .phase-divider { stroke: #666666; stroke-width: 1; stroke-dasharray: 3,3; }
+      .swim-lane-line { stroke: #cccccc; stroke-width: 0.5; }
+      .timeline-line { stroke: #333333; stroke-width: 2; }
+      .trend-arrow { stroke: #666666; stroke-width: 1.5; fill: none; }
+    </style>
+    
+    <!-- Arrow markers -->
+    <marker id="timeline-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#333333"/>
+    </marker>
+    
+    <marker id="trend-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="842" height="595" fill="white"/>
+  
+  <!-- Main title -->
+  <text x="421" y="25" class="main-title" text-anchor="middle">Legislative Evolution &amp; Implementation Timeline (1993-2024)</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(50, 50)">
+    
+    <!-- Phase backgrounds -->
+    <g id="phase-backgrounds">
+      <!-- Foundation Era (1993-2002) -->
+      <rect x="0" y="0" width="220" height="420" class="foundation-era"/>
+      
+      <!-- Implementation Period (2002-2017) -->
+      <rect x="220" y="0" width="300" height="420" class="implementation-period"/>
+      
+      <!-- Restriction & Securitization (2017-2024) -->
+      <rect x="520" y="0" width="222" height="420" class="restriction-securitization"/>
+    </g>
+    
+    <!-- Phase divider lines -->
+    <g id="phase-dividers">
+      <line x1="220" y1="0" x2="220" y2="420" class="phase-divider"/>
+      <line x1="520" y1="0" x2="520" y2="420" class="phase-divider"/>
+    </g>
+    
+    <!-- Phase titles -->
+    <g id="phase-titles">
+      <!-- Foundation Era -->
+      <rect x="10" y="10" width="100" height="20" fill="#2d5a2d" rx="3"/>
+      <text x="60" y="22" class="phase-title" text-anchor="middle">Foundation Era</text>
+      
+      <!-- Implementation Period -->
+      <rect x="280" y="10" width="120" height="20" fill="#cc6600" rx="3"/>
+      <text x="340" y="22" class="phase-title" text-anchor="middle">Implementation Period</text>
+      
+      <!-- Restriction & Securitization -->
+      <rect x="540" y="10" width="150" height="20" fill="#cc3333" rx="3"/>
+      <text x="615" y="22" class="phase-title" text-anchor="middle">Restriction &amp; Securitization</text>
+    </g>
+    
+    <!-- Year markers at top -->
+    <g id="year-markers" transform="translate(0, 40)">
+      <text x="0" y="0" class="year-label" text-anchor="middle">1993</text>
+      <text x="55" y="0" class="year-label" text-anchor="middle">1998</text>
+      <text x="110" y="0" class="year-label" text-anchor="middle">2000</text>
+      <text x="220" y="0" class="year-label" text-anchor="middle">2002</text>
+      <text x="320" y="0" class="year-label" text-anchor="middle">2010</text>
+      <text x="420" y="0" class="year-label" text-anchor="middle">2015</text>
+      <text x="520" y="0" class="year-label" text-anchor="middle">2017</text>
+      <text x="620" y="0" class="year-label" text-anchor="middle">2022</text>
+      <text x="742" y="0" class="year-label" text-anchor="middle">2024</text>
+    </g>
+    
+    <!-- Swim lane dividers -->
+    <g id="swim-lanes" transform="translate(0, 60)">
+      <line x1="0" y1="100" x2="742" y2="100" class="swim-lane-line"/>
+      <line x1="0" y1="200" x2="742" y2="200" class="swim-lane-line"/>
+      <line x1="0" y1="300" x2="742" y2="300" class="swim-lane-line"/>
+    </g>
+    
+    <!-- Category labels -->
+    <g id="category-labels" transform="translate(-50, 60)">
+      <text x="0" y="50" class="category-label" text-anchor="end">Legislation</text>
+      <text x="0" y="62" class="category-label" text-anchor="end">Passed</text>
+      
+      <text x="0" y="150" class="category-label" text-anchor="end">Implementation</text>
+      <text x="0" y="162" class="category-label" text-anchor="end">&amp; Amendments</text>
+      
+      <text x="0" y="250" class="category-label" text-anchor="end">Court Challenges</text>
+      <text x="0" y="262" class="category-label" text-anchor="end">&amp; Interpretations</text>
+    </g>
+    
+    <!-- Events -->
+    <g id="events" transform="translate(0, 60)">
+      
+      <!-- Legislation Passed (Top Lane) -->
+      <!-- 1993: Restoration & Extension of SA Citizenship Act -->
+      <rect x="5" y="20" width="75" height="30" class="legislation-box" rx="3"/>
+      <text x="42" y="30" class="event-year" text-anchor="middle" fill="white">1993</text>
+      <text x="42" y="40" class="event-label" text-anchor="middle" fill="white">Citizenship</text>
+      <text x="42" y="48" class="event-label" text-anchor="middle" fill="white">Restoration</text>
+      
+      <!-- 1995: SA Citizenship Act 88 -->
+      <rect x="30" y="55" width="65" height="25" class="legislation-box" rx="3"/>
+      <text x="62" y="65" class="event-year" text-anchor="middle" fill="white">1995</text>
+      <text x="62" y="75" class="event-label" text-anchor="middle" fill="white">Citizenship Act 88</text>
+      
+      <!-- 1998: Refugees Act 130 -->
+      <rect x="80" y="20" width="65" height="30" class="legislation-box" rx="3"/>
+      <text x="112" y="30" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="112" y="40" class="event-label" text-anchor="middle" fill="white">Refugees</text>
+      <text x="112" y="48" class="event-label" text-anchor="middle" fill="white">Act 130</text>
+      
+      <!-- 2002: Immigration Act 13 -->
+      <rect x="230" y="20" width="70" height="30" class="legislation-box" rx="3"/>
+      <text x="265" y="30" class="event-year" text-anchor="middle" fill="white">2002</text>
+      <text x="265" y="40" class="event-label" text-anchor="middle" fill="white">Immigration</text>
+      <text x="265" y="48" class="event-label" text-anchor="middle" fill="white">Act 13</text>
+      
+      <!-- 2017: White Paper on International Migration -->
+      <rect x="530" y="20" width="90" height="30" class="legislation-box" rx="3"/>
+      <text x="575" y="30" class="event-year" text-anchor="middle" fill="white">2017</text>
+      <text x="575" y="40" class="event-label" text-anchor="middle" fill="white">Migration</text>
+      <text x="575" y="48" class="event-label" text-anchor="middle" fill="white">White Paper</text>
+      
+      <!-- 2020: BMA Act -->
+      <rect x="590" y="55" width="60" height="25" class="legislation-box" rx="3"/>
+      <text x="620" y="65" class="event-year" text-anchor="middle" fill="white">2020</text>
+      <text x="620" y="75" class="event-label" text-anchor="middle" fill="white">BMA Act</text>
+      
+      <!-- 2023: White Paper on Citizenship -->
+      <rect x="650" y="20" width="85" height="30" class="legislation-box" rx="3"/>
+      <text x="692" y="30" class="event-year" text-anchor="middle" fill="white">2023</text>
+      <text x="692" y="40" class="event-label" text-anchor="middle" fill="white">Citizenship</text>
+      <text x="692" y="48" class="event-label" text-anchor="middle" fill="white">White Paper</text>
+      
+      <!-- Implementation & Amendments (Middle Lane) -->
+      <!-- 2000: Refugees Act commenced -->
+      <rect x="130" y="120" width="70" height="30" class="implementation-box" rx="3"/>
+      <text x="165" y="130" class="event-year" text-anchor="middle" fill="white">2000</text>
+      <text x="165" y="140" class="event-label" text-anchor="middle" fill="white">Refugees Act</text>
+      <text x="165" y="148" class="event-label" text-anchor="middle" fill="white">Commenced</text>
+      
+      <!-- 2003: Immigration Act commenced -->
+      <rect x="240" y="155" width="80" height="30" class="implementation-box" rx="3"/>
+      <text x="280" y="165" class="event-year" text-anchor="middle" fill="white">2003</text>
+      <text x="280" y="175" class="event-label" text-anchor="middle" fill="white">Immigration Act</text>
+      <text x="280" y="183" class="event-label" text-anchor="middle" fill="white">Commenced</text>
+      
+      <!-- 2014: Immigration Regulations -->
+      <rect x="340" y="120" width="80" height="30" class="implementation-box" rx="3"/>
+      <text x="380" y="130" class="event-year" text-anchor="middle" fill="white">2014</text>
+      <text x="380" y="140" class="event-label" text-anchor="middle" fill="white">Immigration</text>
+      <text x="380" y="148" class="event-label" text-anchor="middle" fill="white">Regulations</text>
+      
+      <!-- 2016: Critical Skills List -->
+      <rect x="380" y="155" width="75" height="30" class="implementation-box" rx="3"/>
+      <text x="417" y="165" class="event-year" text-anchor="middle" fill="white">2016</text>
+      <text x="417" y="175" class="event-label" text-anchor="middle" fill="white">Critical Skills</text>
+      <text x="417" y="183" class="event-label" text-anchor="middle" fill="white">List</text>
+      
+      <!-- 2019: ZEP Extension -->
+      <rect x="470" y="120" width="65" height="25" class="implementation-box" rx="3"/>
+      <text x="502" y="130" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="502" y="140" class="event-label" text-anchor="middle" fill="white">ZEP Extension</text>
+      
+      <!-- 2021: ZEP Termination -->
+      <rect x="560" y="120" width="75" height="30" class="implementation-box" rx="3"/>
+      <text x="597" y="130" class="event-year" text-anchor="middle" fill="white">2021</text>
+      <text x="597" y="140" class="event-label" text-anchor="middle" fill="white">ZEP</text>
+      <text x="597" y="148" class="event-label" text-anchor="middle" fill="white">Termination</text>
+      
+      <!-- 2022: BMA Implementation -->
+      <rect x="620" y="155" width="80" height="30" class="implementation-box" rx="3"/>
+      <text x="660" y="165" class="event-year" text-anchor="middle" fill="white">2022</text>
+      <text x="660" y="175" class="event-label" text-anchor="middle" fill="white">BMA</text>
+      <text x="660" y="183" class="event-label" text-anchor="middle" fill="white">Implementation</text>
+      
+      <!-- Court Challenges & Interpretations (Bottom Lane) -->
+      <!-- 2008: Khosa v Minister -->
+      <rect x="260" y="220" width="70" height="30" class="court-box" rx="3"/>
+      <text x="295" y="230" class="event-year" text-anchor="middle" fill="white">2008</text>
+      <text x="295" y="240" class="event-label" text-anchor="middle" fill="white">Khosa v</text>
+      <text x="295" y="248" class="event-label" text-anchor="middle" fill="white">Minister</text>
+      
+      <!-- 2012: Somali Community -->
+      <rect x="320" y="255" width="75" height="30" class="court-box" rx="3"/>
+      <text x="357" y="265" class="event-year" text-anchor="middle" fill="white">2012</text>
+      <text x="357" y="275" class="event-label" text-anchor="middle" fill="white">Somali</text>
+      <text x="357" y="283" class="event-label" text-anchor="middle" fill="white">Community</text>
+      
+      <!-- 2014: Lawyers for Human Rights -->
+      <rect x="370" y="220" width="85" height="30" class="court-box" rx="3"/>
+      <text x="412" y="230" class="event-year" text-anchor="middle" fill="white">2014</text>
+      <text x="412" y="240" class="event-label" text-anchor="middle" fill="white">LHR Case</text>
+      <text x="412" y="248" class="event-label" text-anchor="middle" fill="white">Children</text>
+      
+      <!-- 2017: LHR v Minister -->
+      <rect x="530" y="220" width="75" height="30" class="court-box" rx="3"/>
+      <text x="567" y="230" class="event-year" text-anchor="middle" fill="white">2017</text>
+      <text x="567" y="240" class="event-label" text-anchor="middle" fill="white">LHR v</text>
+      <text x="567" y="248" class="event-label" text-anchor="middle" fill="white">Minister</text>
+      
+      <!-- 2018: Scalabrini Centre -->
+      <rect x="550" y="255" width="80" height="30" class="court-box" rx="3"/>
+      <text x="590" y="265" class="event-year" text-anchor="middle" fill="white">2018</text>
+      <text x="590" y="275" class="event-label" text-anchor="middle" fill="white">Scalabrini</text>
+      <text x="590" y="283" class="event-label" text-anchor="middle" fill="white">Centre</text>
+      
+      <!-- 2021: Makoma & Others -->
+      <rect x="610" y="220" width="75" height="30" class="court-box" rx="3"/>
+      <text x="647" y="230" class="event-year" text-anchor="middle" fill="white">2021</text>
+      <text x="647" y="240" class="event-label" text-anchor="middle" fill="white">Makoma &amp;</text>
+      <text x="647" y="248" class="event-label" text-anchor="middle" fill="white">Others</text>
+      
+      <!-- 2023: HSF/CoRMSA ZEP Challenge -->
+      <rect x="650" y="255" width="90" height="30" class="court-box" rx="3"/>
+      <text x="695" y="265" class="event-year" text-anchor="middle" fill="white">2023</text>
+      <text x="695" y="275" class="event-label" text-anchor="middle" fill="white">HSF/CoRMSA</text>
+      <text x="695" y="283" class="event-label" text-anchor="middle" fill="white">ZEP Challenge</text>
+    </g>
+    
+    <!-- Timeline arrow at bottom -->
+    <g id="timeline" transform="translate(0, 480)">
+      <line x1="0" y1="0" x2="742" y2="0" class="timeline-line" marker-end="url(#timeline-arrow)"/>
+    </g>
+    
+    <!-- Trend analysis arrow -->
+    <g id="trend-analysis" transform="translate(0, 510)">
+      <path d="M 50,0 Q 250,15 450,25 Q 550,30 650,35" class="trend-arrow" marker-end="url(#trend-arrow)"/>
+      <text x="50" y="-5" class="trend-label">Rights-Based Constitutional Framework</text>
+      <text x="480" y="50" class="trend-label">Security-Focused Legislative Restrictions</text>
+    </g>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="50" y="570" class="event-label" fill="#666666">
+    Progressive Restriction: From Rights-Based to Security-Focused Legislation, with increasing judicial challenges to restrictive measures
+  </text>
+</svg>

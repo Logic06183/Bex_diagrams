@@ -1,0 +1,284 @@
+<!-- Legislative Evolution Chart - Scientific/Academic Style for A4 Portrait -->
+<!-- Dimensions: 210mm x 297mm at 300 DPI = 2480 x 3508 pixels -->
+<!-- Using 842 x 1190 for web display (proportional to A4 portrait) -->
+<svg width="842" height="1190" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 1190">
+  <defs>
+    <style>
+      /* Academic Typography */
+      .figure-title { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; fill: #000000; }
+      .figure-caption { font-family: Arial, Helvetica, sans-serif; font-size: 9px; fill: #333333; }
+      .axis-label { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: Arial, Helvetica, sans-serif; font-size: 9px; fill: #333333; }
+      .law-title { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .law-detail { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      .impact-text { font-family: Arial, Helvetica, sans-serif; font-size: 7px; fill: #666666; }
+      .legend-text { font-family: Arial, Helvetica, sans-serif; font-size: 8px; fill: #333333; }
+      
+      /* Legislative Category Colors - ColorBrewer Paired */
+      .new-legislation { fill: #a6cee3; stroke: #1f78b4; }
+      .amendment { fill: #b2df8a; stroke: #33a02c; }
+      .implementation { fill: #fb9a99; stroke: #e31a1c; }
+      .policy-white-paper { fill: #fdbf6f; stroke: #ff7f00; }
+      .regulatory { fill: #cab2d6; stroke: #6a3d9a; }
+      .judicial { fill: #ffff99; stroke: #b15928; }
+      
+      /* Legislative Impact Scale */
+      .impact-low { opacity: 0.4; }
+      .impact-medium { opacity: 0.7; }
+      .impact-high { opacity: 1.0; }
+      
+      /* Grid and Structure */
+      .grid-line { stroke: #e0e0e0; stroke-width: 0.5; }
+      .axis-line { stroke: #333333; stroke-width: 1.5; }
+      .lifespan-bar { stroke-width: 1; }
+      .connection-line { stroke: #999999; stroke-width: 0.5; fill: none; stroke-dasharray: 2,2; }
+    </style>
+    
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#333333"/>
+    </marker>
+    
+    <!-- Patterns for special legislation -->
+    <pattern id="transition-pattern" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#a6cee3"/>
+      <circle cx="3" cy="3" r="1" fill="#1f78b4"/>
+    </pattern>
+    
+    <pattern id="restrictive-pattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#b2df8a"/>
+      <path d="M0,4 L8,4" stroke="#33a02c" stroke-width="1"/>
+      <path d="M4,0 L4,8" stroke="#33a02c" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- White background -->
+  <rect width="842" height="1190" fill="white"/>
+  
+  <!-- Title -->
+  <text x="421" y="40" text-anchor="middle" class="figure-title">Figure 4: Evolution of Migration and Asylum Legislation in South Africa</text>
+  <text x="421" y="58" text-anchor="middle" class="figure-caption">Legislative Lifecycle Analysis with Implementation Periods and Amendments (1993-2024)</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(120, 100)">
+    
+    <!-- Background grid -->
+    <g id="grid">
+      <!-- Horizontal grid lines for each law -->
+      <line x1="0" y1="60" x2="600" y2="60" class="grid-line"/>
+      <line x1="0" y1="120" x2="600" y2="120" class="grid-line"/>
+      <line x1="0" y1="180" x2="600" y2="180" class="grid-line"/>
+      <line x1="0" y1="240" x2="600" y2="240" class="grid-line"/>
+      <line x1="0" y1="300" x2="600" y2="300" class="grid-line"/>
+      <line x1="0" y1="360" x2="600" y2="360" class="grid-line"/>
+      <line x1="0" y1="420" x2="600" y2="420" class="grid-line"/>
+      <line x1="0" y1="480" x2="600" y2="480" class="grid-line"/>
+      <line x1="0" y1="540" x2="600" y2="540" class="grid-line"/>
+      <line x1="0" y1="600" x2="600" y2="600" class="grid-line"/>
+      <line x1="0" y1="660" x2="600" y2="660" class="grid-line"/>
+      <line x1="0" y1="720" x2="600" y2="720" class="grid-line"/>
+      <line x1="0" y1="780" x2="600" y2="780" class="grid-line"/>
+      <line x1="0" y1="840" x2="600" y2="840" class="grid-line"/>
+      <line x1="0" y1="900" x2="600" y2="900" class="grid-line"/>
+    </g>
+    
+    <!-- Law labels on left -->
+    <g id="law-labels">
+      <text x="-10" y="35" text-anchor="end" class="law-title">Citizenship Act (1993)</text>
+      <text x="-10" y="95" text-anchor="end" class="law-title">Citizenship Amendment (1995)</text>
+      <text x="-10" y="155" text-anchor="end" class="law-title">Refugees Act (1998)</text>
+      <text x="-10" y="215" text-anchor="end" class="law-title">Immigration Act (2002)</text>
+      <text x="-10" y="275" text-anchor="end" class="law-title">Refugee Regulations (2000)</text>
+      <text x="-10" y="335" text-anchor="end" class="law-title">Immigration Regulations (2003)</text>
+      <text x="-10" y="395" text-anchor="end" class="law-title">Immigration Amendment (2014)</text>
+      <text x="-10" y="455" text-anchor="end" class="law-title">White Paper (2017)</text>
+      <text x="-10" y="515" text-anchor="end" class="law-title">Border Management (2020)</text>
+      <text x="-10" y="575" text-anchor="end" class="law-title">BMA Regulations (2022)</text>
+      <text x="-10" y="635" text-anchor="end" class="law-title">BELA Act (2024)</text>
+      <text x="-10" y="695" text-anchor="end" class="law-title">White Paper Update (2023)</text>
+      <text x="-10" y="755" text-anchor="end" class="law-title">Proposed Amendments</text>
+      <text x="-10" y="815" text-anchor="end" class="law-title">Court Challenges</text>
+      <text x="-10" y="875" text-anchor="end" class="law-title">Constitutional Review</text>
+    </g>
+    
+    <!-- Legislative lifespans (Gantt-style bars) -->
+    <g id="legislative-bars">
+      
+      <!-- 1993 Citizenship Act - Transitional -->
+      <rect x="0" y="20" width="600" height="30" class="new-legislation impact-high lifespan-bar" fill="url(#transition-pattern)"/>
+      <text x="300" y="38" text-anchor="middle" class="law-detail">Restoration and Extension of Citizenship Act</text>
+      <text x="5" y="50" class="impact-text">Impact: Fundamental post-apartheid citizenship framework</text>
+      
+      <!-- 1995 Amendment -->
+      <rect x="40" y="80" width="560" height="20" class="amendment impact-medium lifespan-bar"/>
+      <text x="250" y="93" text-anchor="middle" class="law-detail">Citizenship clarifications and technical amendments</text>
+      
+      <!-- 1998 Refugees Act -->
+      <rect x="80" y="140" width="520" height="30" class="new-legislation impact-high lifespan-bar"/>
+      <text x="340" y="158" text-anchor="middle" class="law-detail">Comprehensive refugee protection framework</text>
+      <text x="85" y="170" class="impact-text">Impact: Aligned with international law, established RRO system</text>
+      
+      <!-- Implementation delay -->
+      <rect x="80" y="175" width="40" height="5" fill="#ff6b6b" opacity="0.7"/>
+      <text x="85" y="185" class="impact-text" fill="#cc0000">2-year implementation delay</text>
+      
+      <!-- 2002 Immigration Act -->
+      <rect x="120" y="200" width="480" height="30" class="new-legislation impact-high lifespan-bar"/>
+      <text x="360" y="218" text-anchor="middle" class="law-detail">Replaced Aliens Control Act</text>
+      <text x="125" y="230" class="impact-text">Impact: New visa categories, enforcement mechanisms</text>
+      
+      <!-- 2000 Refugee Regulations -->
+      <rect x="100" y="260" width="500" height="20" class="regulatory impact-medium lifespan-bar"/>
+      <text x="350" y="273" text-anchor="middle" class="law-detail">Operational procedures for refugee status determination</text>
+      
+      <!-- 2003 Immigration Regulations -->
+      <rect x="140" y="320" width="460" height="20" class="regulatory impact-medium lifespan-bar"/>
+      <text x="370" y="333" text-anchor="middle" class="law-detail">Detailed visa requirements and procedures</text>
+      
+      <!-- 2014 Immigration Amendment - Restrictive -->
+      <rect x="280" y="380" width="320" height="25" class="amendment impact-high lifespan-bar" fill="url(#restrictive-pattern)"/>
+      <text x="440" y="395" text-anchor="middle" class="law-detail">Stricter visa requirements, child documentation</text>
+      <text x="285" y="405" class="impact-text">Impact: Significant access restrictions, family separation</text>
+      
+      <!-- 2017 White Paper -->
+      <rect x="320" y="440" width="60" height="20" class="policy-white-paper impact-medium lifespan-bar"/>
+      <text x="350" y="453" text-anchor="middle" class="law-detail">Policy framework for reform</text>
+      <text x="385" y="453" class="impact-text">→ Not implemented</text>
+      
+      <!-- 2020 Border Management Authority Act -->
+      <rect x="360" y="500" width="240" height="25" class="new-legislation impact-high lifespan-bar"/>
+      <text x="480" y="515" text-anchor="middle" class="law-detail">Centralized border control</text>
+      <text x="365" y="525" class="impact-text">Impact: Institutional restructuring, enforcement focus</text>
+      
+      <!-- 2022 BMA Regulations -->
+      <rect x="400" y="560" width="200" height="20" class="regulatory impact-medium lifespan-bar"/>
+      <text x="500" y="573" text-anchor="middle" class="law-detail">Operational regulations for BMA</text>
+      
+      <!-- 2024 BELA Act -->
+      <rect x="480" y="620" width="120" height="20" class="amendment impact-low lifespan-bar"/>
+      <text x="540" y="633" text-anchor="middle" class="law-detail">Education documentation requirements</text>
+      
+      <!-- 2023 White Paper Update -->
+      <rect x="460" y="680" width="80" height="15" class="policy-white-paper impact-low lifespan-bar"/>
+      <text x="500" y="690" text-anchor="middle" class="law-detail">Policy update</text>
+      
+      <!-- Ongoing/Proposed -->
+      <rect x="500" y="740" width="100" height="15" fill="#cccccc" stroke="#999999" class="lifespan-bar"/>
+      <text x="550" y="750" text-anchor="middle" class="law-detail">Under consideration</text>
+      
+      <!-- Court Challenges (ongoing) -->
+      <rect x="120" y="800" width="480" height="15" class="judicial impact-medium lifespan-bar"/>
+      <text x="360" y="810" text-anchor="middle" class="law-detail">Constitutional and administrative challenges</text>
+      
+      <!-- Constitutional Review (sporadic) -->
+      <rect x="80" y="860" width="520" height="15" fill="#ffff99" stroke="#b15928" opacity="0.3" class="lifespan-bar"/>
+      <text x="340" y="870" text-anchor="middle" class="law-detail">Ongoing constitutional interpretation</text>
+    </g>
+    
+    <!-- Connection lines showing relationships -->
+    <g id="connections">
+      <!-- Citizenship Act to Amendment -->
+      <path d="M 300,50 L 250,80" class="connection-line"/>
+      
+      <!-- Immigration Act to Regulations -->
+      <path d="M 360,230 L 370,320" class="connection-line"/>
+      
+      <!-- Immigration Act to Amendment -->
+      <path d="M 360,230 L 440,380" class="connection-line"/>
+      
+      <!-- White Paper to BMA Act -->
+      <path d="M 350,460 L 480,500" class="connection-line"/>
+      
+      <!-- BMA Act to Regulations -->
+      <path d="M 480,525 L 500,560" class="connection-line"/>
+    </g>
+    
+    <!-- Timeline axis -->
+    <g id="timeline-axis">
+      <line x1="0" y1="920" x2="600" y2="920" class="axis-line" marker-end="url(#arrow)"/>
+      
+      <!-- Year markers -->
+      <text x="0" y="940" class="year-label" text-anchor="middle">1993</text>
+      <text x="40" y="940" class="year-label" text-anchor="middle">1995</text>
+      <text x="80" y="940" class="year-label" text-anchor="middle">1998</text>
+      <text x="120" y="940" class="year-label" text-anchor="middle">2000</text>
+      <text x="160" y="940" class="year-label" text-anchor="middle">2002</text>
+      <text x="200" y="940" class="year-label" text-anchor="middle">2004</text>
+      <text x="240" y="940" class="year-label" text-anchor="middle">2006</text>
+      <text x="280" y="940" class="year-label" text-anchor="middle">2008</text>
+      <text x="320" y="940" class="year-label" text-anchor="middle">2010</text>
+      <text x="360" y="940" class="year-label" text-anchor="middle">2012</text>
+      <text x="400" y="940" class="year-label" text-anchor="middle">2014</text>
+      <text x="440" y="940" class="year-label" text-anchor="middle">2016</text>
+      <text x="480" y="940" class="year-label" text-anchor="middle">2018</text>
+      <text x="520" y="940" class="year-label" text-anchor="middle">2020</text>
+      <text x="560" y="940" class="year-label" text-anchor="middle">2022</text>
+      <text x="600" y="940" class="year-label" text-anchor="middle">2024</text>
+      
+      <!-- Period demarcations -->
+      <g id="periods">
+        <rect x="0" y="950" width="120" height="15" fill="#e6f3ff" stroke="#0066cc" stroke-width="0.5"/>
+        <text x="60" y="960" class="legend-text" text-anchor="middle">Transition</text>
+        
+        <rect x="120" y="950" width="160" height="15" fill="#fff2e6" stroke="#ff8800" stroke-width="0.5"/>
+        <text x="200" y="960" class="legend-text" text-anchor="middle">Consolidation</text>
+        
+        <rect x="280" y="950" width="100" height="15" fill="#ffe6e6" stroke="#cc0000" stroke-width="0.5"/>
+        <text x="330" y="960" class="legend-text" text-anchor="middle">Restriction</text>
+        
+        <rect x="380" y="950" width="220" height="15" fill="#f0f0f0" stroke="#666666" stroke-width="0.5"/>
+        <text x="490" y="960" class="legend-text" text-anchor="middle">Securitisation</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Analysis panel -->
+  <g id="analysis-panel" transform="translate(60, 1050)">
+    <rect x="0" y="0" width="722" height="100" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="10" y="20" class="law-title">Legislative Evolution Patterns:</text>
+    <text x="10" y="40" class="law-detail">• <tspan font-weight="600">1993-2003:</tspan> Rights-based framework establishment (progressive phase)</text>
+    <text x="10" y="55" class="law-detail">• <tspan font-weight="600">2008-2014:</tspan> Gradual restriction and enforcement emphasis</text>
+    <text x="10" y="70" class="law-detail">• <tspan font-weight="600">2014-2024:</tspan> Securitisation and administrative control prioritised</text>
+    <text x="10" y="85" class="law-detail">• <tspan font-weight="600">Ongoing:</tspan> Tension between constitutional obligations and restrictive implementation</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(120, 980)">
+    <text x="0" y="0" class="axis-label">Legend:</text>
+    
+    <g transform="translate(60, -10)">
+      <rect x="0" y="0" width="15" height="10" class="new-legislation"/>
+      <text x="20" y="8" class="legend-text">New Legislation</text>
+    </g>
+    
+    <g transform="translate(140, -10)">
+      <rect x="0" y="0" width="15" height="10" class="amendment"/>
+      <text x="20" y="8" class="legend-text">Amendment</text>
+    </g>
+    
+    <g transform="translate(220, -10)">
+      <rect x="0" y="0" width="15" height="10" class="implementation"/>
+      <text x="20" y="8" class="legend-text">Implementation</text>
+    </g>
+    
+    <g transform="translate(300, -10)">
+      <rect x="0" y="0" width="15" height="10" class="regulatory"/>
+      <text x="20" y="8" class="legend-text">Regulations</text>
+    </g>
+    
+    <g transform="translate(380, -10)">
+      <rect x="0" y="0" width="15" height="10" class="policy-white-paper"/>
+      <text x="20" y="8" class="legend-text">Policy Paper</text>
+    </g>
+    
+    <g transform="translate(460, -10)">
+      <rect x="0" y="0" width="15" height="10" class="judicial"/>
+      <text x="20" y="8" class="legend-text">Judicial</text>
+    </g>
+  </g>
+  
+  <!-- Figure caption -->
+  <text x="60" y="1175" class="figure-caption">
+    Sources: South African Government Gazette, parliamentary records, Department of Home Affairs reports, constitutional court judgments.
+  </text>
+</svg>

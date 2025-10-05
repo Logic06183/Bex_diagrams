@@ -1,0 +1,251 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .title { font-family: 'Arial', sans-serif; font-size: 22px; font-weight: bold; fill: #1a2332; }
+      .subtitle { font-family: 'Arial', sans-serif; font-size: 14px; fill: #5a6c7d; }
+      .year { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: 600; fill: #2E4057; }
+      .law-title { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: 600; fill: #2E4057; }
+      .law-detail { font-family: 'Arial', sans-serif; font-size: 11px; fill: #4a5568; }
+      .timeline-main { stroke: #2E4057; stroke-width: 3; }
+      .timeline-branch { stroke: #5a7a9f; stroke-width: 1.5; }
+      .law-box { fill: #f0f4f8; stroke: #2E4057; stroke-width: 1.5; }
+      .law-box-highlight { fill: #e8f0fe; stroke: #1a73e8; stroke-width: 2; }
+      .implementation { fill: #4CAF50; }
+      .amendment { fill: #FF9800; }
+      .white-paper { fill: #9C27B0; }
+      .new-law { fill: #2196F3; }
+    </style>
+    
+    <!-- Gradient definitions -->
+    <linearGradient id="timeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E4057;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5a7a9f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8ba1b8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E4057"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#fafbfc"/>
+  
+  <!-- Title Section -->
+  <text x="600" y="40" text-anchor="middle" class="title">Migration & Asylum Law Timeline</text>
+  <text x="600" y="65" text-anchor="middle" class="subtitle">Evolution of South African Immigration and Refugee Legislation (1993-2024)</text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 100)">
+    <text x="0" y="0" class="law-title">Legislation Types:</text>
+    <g transform="translate(0, 15)">
+      <circle cx="10" cy="5" r="6" class="new-law"/>
+      <text x="25" y="9" class="law-detail">New Legislation</text>
+    </g>
+    <g transform="translate(150, 15)">
+      <circle cx="10" cy="5" r="6" class="implementation"/>
+      <text x="25" y="9" class="law-detail">Implementation</text>
+    </g>
+    <g transform="translate(300, 15)">
+      <circle cx="10" cy="5" r="6" class="amendment"/>
+      <text x="25" y="9" class="law-detail">Amendment</text>
+    </g>
+    <g transform="translate(450, 15)">
+      <circle cx="10" cy="5" r="6" class="white-paper"/>
+      <text x="25" y="9" class="law-detail">White Paper/Policy</text>
+    </g>
+  </g>
+  
+  <!-- Main Timeline -->
+  <g id="main-timeline" transform="translate(100, 400)">
+    <!-- Timeline base -->
+    <line x1="0" y1="0" x2="1000" y2="0" class="timeline-main" marker-end="url(#arrowhead)"/>
+    
+    <!-- Year markers and events -->
+    <!-- 1993 - Citizenship Act -->
+    <g transform="translate(0, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">1993</text>
+      
+      <g transform="translate(-60, -150)">
+        <rect x="0" y="0" width="120" height="80" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="60" cy="-10" r="8" class="new-law"/>
+        <line x1="60" y1="-2" x2="60" y2="110" class="timeline-branch"/>
+        <text x="60" y="20" text-anchor="middle" class="law-title">Citizenship Act</text>
+        <text x="60" y="35" text-anchor="middle" class="law-detail">Restoration &amp;</text>
+        <text x="60" y="48" text-anchor="middle" class="law-detail">Extension of</text>
+        <text x="60" y="61" text-anchor="middle" class="law-detail">Citizenship</text>
+      </g>
+    </g>
+    
+    <!-- 1995 - Amendment -->
+    <g transform="translate(80, 0)">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#2E4057" stroke-width="2"/>
+      <text x="0" y="30" text-anchor="middle" class="year">1995</text>
+      
+      <g transform="translate(-50, 80)">
+        <rect x="0" y="0" width="100" height="60" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="50" cy="70" r="6" class="amendment"/>
+        <line x1="50" y1="-70" x2="50" y2="-10" class="timeline-branch"/>
+        <text x="50" y="20" text-anchor="middle" class="law-title">Amendment</text>
+        <text x="50" y="35" text-anchor="middle" class="law-detail">Citizenship</text>
+        <text x="50" y="48" text-anchor="middle" class="law-detail">Clarifications</text>
+      </g>
+    </g>
+    
+    <!-- 1998 - Refugees Act -->
+    <g transform="translate(200, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">1998</text>
+      
+      <g transform="translate(-70, -180)">
+        <rect x="0" y="0" width="140" height="90" class="law-box-highlight" filter="url(#shadow)" rx="5"/>
+        <circle cx="70" cy="-10" r="9" class="new-law"/>
+        <line x1="70" y1="-1" x2="70" y2="140" class="timeline-branch" stroke-width="2"/>
+        <text x="70" y="20" text-anchor="middle" class="law-title" style="font-size: 13px;">Refugees Act</text>
+        <text x="70" y="35" text-anchor="middle" class="law-detail">Comprehensive</text>
+        <text x="70" y="48" text-anchor="middle" class="law-detail">protection framework</text>
+        <text x="70" y="61" text-anchor="middle" class="law-detail">aligned with</text>
+        <text x="70" y="74" text-anchor="middle" class="law-detail">international law</text>
+      </g>
+    </g>
+    
+    <!-- 2000 - Implementation -->
+    <g transform="translate(280, 0)">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#2E4057" stroke-width="2"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2000</text>
+      
+      <g transform="translate(-50, 80)">
+        <rect x="0" y="0" width="100" height="60" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="50" cy="70" r="6" class="implementation"/>
+        <line x1="50" y1="-70" x2="50" y2="-10" class="timeline-branch"/>
+        <text x="50" y="20" text-anchor="middle" class="law-title">Refugees Act</text>
+        <text x="50" y="35" text-anchor="middle" class="law-detail">Comes into</text>
+        <text x="50" y="48" text-anchor="middle" class="law-detail">effect</text>
+      </g>
+    </g>
+    
+    <!-- 2002 - Immigration Act -->
+    <g transform="translate(380, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2002</text>
+      
+      <g transform="translate(-70, -200)">
+        <rect x="0" y="0" width="140" height="100" class="law-box-highlight" filter="url(#shadow)" rx="5"/>
+        <circle cx="70" cy="-10" r="10" class="new-law"/>
+        <line x1="70" y1="0" x2="70" y2="160" class="timeline-branch" stroke-width="2"/>
+        <text x="70" y="20" text-anchor="middle" class="law-title" style="font-size: 13px;">Immigration Act</text>
+        <text x="70" y="35" text-anchor="middle" class="law-detail">Replaces Aliens</text>
+        <text x="70" y="48" text-anchor="middle" class="law-detail">Control Act</text>
+        <text x="70" y="61" text-anchor="middle" class="law-detail">New visa categories</text>
+        <text x="70" y="74" text-anchor="middle" class="law-detail">&amp; enforcement</text>
+        <text x="70" y="87" text-anchor="middle" class="law-detail">mechanisms</text>
+      </g>
+    </g>
+    
+    <!-- 2003 - Implementation -->
+    <g transform="translate(430, 0)">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#2E4057" stroke-width="2"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2003</text>
+      
+      <g transform="translate(-50, 80)">
+        <rect x="0" y="0" width="100" height="60" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="50" cy="70" r="6" class="implementation"/>
+        <line x1="50" y1="-70" x2="50" y2="-10" class="timeline-branch"/>
+        <text x="50" y="20" text-anchor="middle" class="law-title">Immigration</text>
+        <text x="50" y="35" text-anchor="middle" class="law-detail">Act takes</text>
+        <text x="50" y="48" text-anchor="middle" class="law-detail">effect</text>
+      </g>
+    </g>
+    
+    <!-- 2014 - Amendment -->
+    <g transform="translate(640, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2014</text>
+      
+      <g transform="translate(-60, -150)">
+        <rect x="0" y="0" width="120" height="80" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="60" cy="-10" r="7" class="amendment"/>
+        <line x1="60" y1="-2" x2="60" y2="110" class="timeline-branch"/>
+        <text x="60" y="20" text-anchor="middle" class="law-title">Immigration</text>
+        <text x="60" y="33" text-anchor="middle" class="law-title">Amendment</text>
+        <text x="60" y="48" text-anchor="middle" class="law-detail">Stricter visa</text>
+        <text x="60" y="61" text-anchor="middle" class="law-detail">requirements</text>
+      </g>
+    </g>
+    
+    <!-- 2017 - White Paper -->
+    <g transform="translate(750, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2017</text>
+      
+      <g transform="translate(-75, 90)">
+        <rect x="0" y="0" width="150" height="90" class="law-box-highlight" filter="url(#shadow)" rx="5"/>
+        <circle cx="75" cy="100" r="8" class="white-paper"/>
+        <line x1="75" y1="-80" x2="75" y2="-10" class="timeline-branch" stroke-width="2"/>
+        <text x="75" y="20" text-anchor="middle" class="law-title">White Paper on</text>
+        <text x="75" y="33" text-anchor="middle" class="law-title">International</text>
+        <text x="75" y="46" text-anchor="middle" class="law-title">Migration</text>
+        <text x="75" y="61" text-anchor="middle" class="law-detail">Policy framework</text>
+        <text x="75" y="74" text-anchor="middle" class="law-detail">for reform</text>
+      </g>
+    </g>
+    
+    <!-- 2020-2022 - BMA Act -->
+    <g transform="translate(860, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2020</text>
+      
+      <g transform="translate(-70, -180)">
+        <rect x="0" y="0" width="140" height="90" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="70" cy="-10" r="8" class="new-law"/>
+        <line x1="70" y1="-1" x2="70" y2="140" class="timeline-branch"/>
+        <text x="70" y="20" text-anchor="middle" class="law-title">Border</text>
+        <text x="70" y="33" text-anchor="middle" class="law-title">Management</text>
+        <text x="70" y="46" text-anchor="middle" class="law-title">Authority Act</text>
+        <text x="70" y="61" text-anchor="middle" class="law-detail">Centralized border</text>
+        <text x="70" y="74" text-anchor="middle" class="law-detail">control (2020-22)</text>
+      </g>
+    </g>
+    
+    <!-- 2023-2024 -->
+    <g transform="translate(960, 0)">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#2E4057" stroke-width="3"/>
+      <text x="0" y="30" text-anchor="middle" class="year">2023-24</text>
+      
+      <g transform="translate(-60, 90)">
+        <rect x="0" y="0" width="120" height="80" class="law-box" filter="url(#shadow)" rx="5"/>
+        <circle cx="60" cy="90" r="7" class="white-paper"/>
+        <line x1="60" y1="-80" x2="60" y2="-10" class="timeline-branch"/>
+        <text x="60" y="20" text-anchor="middle" class="law-title">Recent Updates</text>
+        <text x="60" y="35" text-anchor="middle" class="law-detail">White Paper 2023</text>
+        <text x="60" y="48" text-anchor="middle" class="law-detail">BELA Act 2024</text>
+        <text x="60" y="61" text-anchor="middle" class="law-detail">Education access</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Analysis section -->
+  <g id="analysis" transform="translate(100, 570)">
+    <rect x="0" y="0" width="1000" height="100" fill="#f0f4f8" stroke="#2E4057" stroke-width="1" rx="5" opacity="0.8"/>
+    <text x="20" y="25" class="law-title">Legislative Evolution Analysis:</text>
+    <text x="20" y="45" class="law-detail">• Shift from apartheid-era Aliens Control Act to rights-based legislation (1993-2003)</text>
+    <text x="20" y="60" class="law-detail">• Progressive tightening of immigration controls post-2008 xenophobic violence</text>
+    <text x="20" y="75" class="law-detail">• Ongoing tension between constitutional obligations and restrictive policy implementation</text>
+    <text x="20" y="90" class="law-detail">• Recent focus on border securitization and administrative efficiency over protection</text>
+  </g>
+</svg>

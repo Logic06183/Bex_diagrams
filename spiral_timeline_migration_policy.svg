@@ -1,0 +1,238 @@
+<!--
+SPIRAL TIMELINE VISUALIZATION: South African Migration Policy Evolution 1993-2025
+Innovative spiral design showing temporal progression with intensity rings
+- Inner spiral: Timeline progression from 1993-2025
+- Ring layers: Different policy categories with varying intensity
+- Explosion effects: Major events like 2008 pogrom, Dudula movement
+- Color coding: Policy types and their intensity
+- Particle effects: Event magnitude representation
+-->
+
+<svg width="842" height="595" viewBox="0 0 842 595" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions for different policy categories -->
+    <radialGradient id="migrationLaw" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.3"/>
+    </radialGradient>
+    
+    <radialGradient id="antiMigrant" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:0.3"/>
+    </radialGradient>
+    
+    <radialGradient id="policyDivide" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.3"/>
+    </radialGradient>
+    
+    <radialGradient id="civilSociety" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.3"/>
+    </radialGradient>
+    
+    <!-- Explosion effect for major events -->
+    <radialGradient id="explosionGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1"/>
+      <stop offset="30%" style="stop-color:#f59e0b;stop-opacity:0.8"/>
+      <stop offset="70%" style="stop-color:#dc2626;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Filters for particle effects -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Pattern for texture -->
+    <pattern id="spiralTexture" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#f8fafc" opacity="0.1"/>
+      <circle cx="2" cy="2" r="0.5" fill="#e2e8f0" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="842" height="595" fill="#0f172a"/>
+  
+  <!-- Title and subtitle -->
+  <text x="421" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9">
+    Evolution of South African Migration Policy: A Spiral Through Time
+  </text>
+  <text x="421" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
+    1993-2025: Intensity Rings Show Policy Categories and Event Magnitude
+  </text>
+  
+  <!-- Central spiral path -->
+  <g id="spiral-structure">
+    <!-- Spiral base path (timeline backbone) -->
+    <path d="M 421 300 
+             Q 431 290, 441 295
+             Q 461 305, 471 325
+             Q 476 355, 456 375
+             Q 421 390, 391 375
+             Q 361 345, 371 310
+             Q 391 280, 426 285
+             Q 471 295, 501 330
+             Q 521 375, 486 415
+             Q 431 445, 376 415
+             Q 321 370, 336 315
+             Q 361 260, 421 275
+             Q 491 290, 536 340
+             Q 571 400, 521 460
+             Q 451 505, 381 460
+             Q 311 400, 331 335
+             Q 361 270, 426 280
+             Q 511 295, 571 355
+             Q 616 425, 556 490
+             Q 471 535, 386 490
+             Q 301 425, 326 350" 
+          stroke="#64748b" stroke-width="2" fill="none" opacity="0.6"/>
+    
+    <!-- Year markers along spiral -->
+    <g id="year-markers">
+      <!-- 1993 - Starting point -->
+      <circle cx="421" cy="300" r="3" fill="#f1f5f9"/>
+      <text x="415" y="295" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">1993</text>
+      
+      <!-- 1998 - Civil society begins -->
+      <circle cx="456" cy="375" r="3" fill="#059669"/>
+      <text x="465" y="370" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">1998</text>
+      
+      <!-- 2002 - Immigration Act -->
+      <circle cx="371" cy="310" r="3" fill="#2563eb"/>
+      <text x="350" y="305" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">2002</text>
+      
+      <!-- 2008 - Major pogrom (explosion effect) -->
+      <circle cx="486" cy="415" r="15" fill="url(#explosionGradient)" filter="url(#glow)"/>
+      <text x="500" y="410" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9" font-weight="bold">2008</text>
+      <text x="500" y="422" font-family="Arial, sans-serif" font-size="8" fill="#fbbf24">POGROM</text>
+      
+      <!-- 2015 - Anti-foreigner violence -->
+      <circle cx="331" cy="335" r="8" fill="#dc2626" filter="url(#glow)"/>
+      <text x="310" y="330" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">2015</text>
+      
+      <!-- 2020 - COVID impact -->
+      <circle cx="571" cy="355" r="10" fill="#f59e0b" filter="url(#glow)"/>
+      <text x="580" y="350" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">2020</text>
+      <text x="580" y="362" font-family="Arial, sans-serif" font-size="8" fill="#fbbf24">COVID</text>
+      
+      <!-- 2022 - Dudula movement -->
+      <circle cx="386" cy="490" r="12" fill="#dc2626" filter="url(#glow)"/>
+      <text x="350" y="485" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">2022</text>
+      <text x="350" y="497" font-family="Arial, sans-serif" font-size="8" fill="#fbbf24">DUDULA</text>
+      
+      <!-- 2025 - Present -->
+      <circle cx="326" cy="350" r="3" fill="#f1f5f9"/>
+      <text x="305" y="345" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">2025</text>
+    </g>
+  </g>
+  
+  <!-- Intensity rings for policy categories -->
+  <g id="policy-rings">
+    <!-- Migration & Asylum Law Ring -->
+    <g id="migration-law-ring">
+      <circle cx="421" cy="300" r="60" fill="none" stroke="url(#migrationLaw)" stroke-width="8" opacity="0.7"/>
+      <circle cx="441" cy="295" r="5" fill="#2563eb" opacity="0.8"/>
+      <circle cx="371" cy="310" r="8" fill="#1e40af" opacity="0.9"/>
+      <circle cx="426" cy="280" r="6" fill="#3b82f6" opacity="0.8"/>
+    </g>
+    
+    <!-- Anti-migrant mobilisation Ring -->
+    <g id="anti-migrant-ring">
+      <circle cx="421" cy="300" r="90" fill="none" stroke="url(#antiMigrant)" stroke-width="12" opacity="0.8"/>
+      <!-- Particle clusters for violent events -->
+      <g id="violence-particles">
+        <circle cx="480" cy="410" r="3" fill="#dc2626" opacity="0.9"/>
+        <circle cx="485" cy="405" r="2" fill="#f87171" opacity="0.8"/>
+        <circle cx="490" cy="420" r="4" fill="#991b1b" opacity="0.9"/>
+        <circle cx="475" cy="425" r="2" fill="#dc2626" opacity="0.7"/>
+        
+        <circle cx="380" cy="485" r="3" fill="#dc2626" opacity="0.9"/>
+        <circle cx="385" cy="480" r="2" fill="#f87171" opacity="0.8"/>
+        <circle cx="390" cy="495" r="3" fill="#991b1b" opacity="0.9"/>
+      </g>
+    </g>
+    
+    <!-- Anti-Poor vs Pro-Poor Policies Ring -->
+    <g id="policy-divide-ring">
+      <circle cx="421" cy="300" r="120" fill="none" stroke="url(#policyDivide)" stroke-width="6" opacity="0.6"/>
+      <!-- Alternating positive/negative policy markers -->
+      <rect x="565" y="350" width="6" height="15" fill="#f59e0b" opacity="0.8"/>
+      <rect x="565" y="370" width="6" height="10" fill="#dc2626" opacity="0.8"/>
+      <rect x="320" y="340" width="8" height="12" fill="#059669" opacity="0.8"/>
+      <rect x="320" y="360" width="6" height="8" fill="#f59e0b" opacity="0.8"/>
+    </g>
+    
+    <!-- Civil Society Counter-mobilisation Ring -->
+    <g id="civil-society-ring">
+      <circle cx="421" cy="300" r="150" fill="none" stroke="url(#civilSociety)" stroke-width="10" opacity="0.7"/>
+      <!-- Growing response over time -->
+      <circle cx="456" cy="200" r="4" fill="#059669" opacity="0.7"/>
+      <circle cx="500" cy="180" r="6" fill="#10b981" opacity="0.8"/>
+      <circle cx="550" cy="170" r="8" fill="#059669" opacity="0.9"/>
+      <circle cx="280" cy="380" r="5" fill="#047857" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Interactive legend -->
+  <g id="legend" transform="translate(50, 450)">
+    <rect x="0" y="0" width="300" height="120" fill="#1e293b" stroke="#475569" stroke-width="1" rx="5"/>
+    <text x="10" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">
+      Legend: Spiral Timeline with Intensity Rings
+    </text>
+    
+    <!-- Migration Law -->
+    <circle cx="20" cy="35" r="4" fill="#2563eb"/>
+    <text x="30" y="40" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">Migration &amp; Asylum Law</text>
+    
+    <!-- Anti-migrant -->
+    <circle cx="20" cy="50" r="4" fill="#dc2626"/>
+    <text x="30" y="55" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">Anti-migrant Mobilisation</text>
+    
+    <!-- Policy divide -->
+    <rect x="16" y="62" width="8" height="8" fill="#f59e0b"/>
+    <text x="30" y="70" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">Anti-Poor vs Pro-Poor Policies</text>
+    
+    <!-- Civil society -->
+    <circle cx="20" cy="80" r="4" fill="#059669"/>
+    <text x="30" y="85" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">Civil Society Counter-mobilisation</text>
+    
+    <!-- Explosion events -->
+    <circle cx="160" cy="35" r="6" fill="url(#explosionGradient)"/>
+    <text x="175" y="40" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">Major Crisis Events</text>
+    
+    <text x="10" y="105" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">
+      Ring distance = temporal progression | Particle size = event magnitude
+    </text>
+  </g>
+  
+  <!-- Annotations pointing to key features -->
+  <g id="annotations">
+    <!-- Spiral explanation -->
+    <line x1="500" y1="150" x2="470" y2="200" stroke="#64748b" stroke-width="1"/>
+    <text x="505" y="145" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+      Spiral moves outward
+    </text>
+    <text x="505" y="157" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+      through time (1993→2025)
+    </text>
+    
+    <!-- Ring explanation -->
+    <line x1="600" y1="250" x2="550" y2="300" stroke="#64748b" stroke-width="1"/>
+    <text x="605" y="245" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+      Each ring represents
+    </text>
+    <text x="605" y="257" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+      different policy area
+    </text>
+  </g>
+  
+  <!-- Data source attribution -->
+  <text x="421" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">
+    Source: South African Migration Policy Analysis | Design: Innovative Spiral Timeline Visualization
+  </text>
+</svg>

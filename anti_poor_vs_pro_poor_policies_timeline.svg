@@ -1,0 +1,270 @@
+<!-- Anti-Poor vs Pro-Poor Policies Timeline (1994-2025) -->
+<!-- Landscape A4 format: 842 x 595 pixels at 72 DPI -->
+<svg width="842" height="595" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595">
+  <defs>
+    <style>
+      /* Typography - Clean, professional sans-serif */
+      .main-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 18px; font-weight: bold; fill: #000000; }
+      .phase-title { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #ffffff; }
+      .category-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 10px; font-weight: 600; fill: #000000; }
+      .year-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-weight: 500; fill: #000000; }
+      .event-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 8px; fill: #000000; }
+      .event-year { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 7px; font-weight: bold; fill: #000000; }
+      .trend-label { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 9px; font-style: italic; fill: #333333; }
+      
+      /* Phase background colors */
+      .post-apartheid { fill: #a8d5a8; fill-opacity: 0.3; }
+      .austerity-transition { fill: #ffd480; fill-opacity: 0.3; }
+      .covid-beyond { fill: #ffb3b3; fill-opacity: 0.3; }
+      
+      /* Event box colors */
+      .anti-poor-box { fill: #cc3333; stroke: #cc3333; stroke-width: 1; }
+      .pro-poor-box { fill: #4d804d; stroke: #4d804d; stroke-width: 1; }
+      
+      /* Lines and structure */
+      .phase-divider { stroke: #666666; stroke-width: 1; stroke-dasharray: 3,3; }
+      .swim-lane-line { stroke: #cccccc; stroke-width: 0.5; }
+      .timeline-line { stroke: #333333; stroke-width: 2; }
+      .trend-arrow { stroke: #666666; stroke-width: 1.5; fill: none; }
+    </style>
+    
+    <!-- Arrow markers -->
+    <marker id="timeline-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#333333"/>
+    </marker>
+    
+    <marker id="trend-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="842" height="595" fill="white"/>
+  
+  <!-- Main title -->
+  <text x="421" y="25" class="main-title" text-anchor="middle">Anti-Poor vs Pro-Poor Policies Timeline (1994-2025)</text>
+  
+  <!-- Main chart area -->
+  <g id="main-chart" transform="translate(50, 50)">
+    
+    <!-- Phase backgrounds -->
+    <g id="phase-backgrounds">
+      <!-- Post-Apartheid Expansion (1994-2008) -->
+      <rect x="0" y="0" width="280" height="380" class="post-apartheid"/>
+      
+      <!-- Austerity Transition (2008-2018) -->
+      <rect x="280" y="0" width="200" height="380" class="austerity-transition"/>
+      
+      <!-- COVID & Beyond (2018-2025) -->
+      <rect x="480" y="0" width="262" height="380" class="covid-beyond"/>
+    </g>
+    
+    <!-- Phase divider lines -->
+    <g id="phase-dividers">
+      <line x1="280" y1="0" x2="280" y2="380" class="phase-divider"/>
+      <line x1="480" y1="0" x2="480" y2="380" class="phase-divider"/>
+    </g>
+    
+    <!-- Phase titles -->
+    <g id="phase-titles">
+      <!-- Post-Apartheid Expansion -->
+      <rect x="10" y="10" width="120" height="20" fill="#2d5a2d" rx="3"/>
+      <text x="70" y="22" class="phase-title" text-anchor="middle">Post-Apartheid Expansion</text>
+      
+      <!-- Austerity Transition -->
+      <rect x="300" y="10" width="100" height="20" fill="#cc6600" rx="3"/>
+      <text x="350" y="22" class="phase-title" text-anchor="middle">Austerity Transition</text>
+      
+      <!-- COVID & Beyond -->
+      <rect x="500" y="10" width="90" height="20" fill="#cc3333" rx="3"/>
+      <text x="545" y="22" class="phase-title" text-anchor="middle">COVID &amp; Beyond</text>
+    </g>
+    
+    <!-- Year markers at top -->
+    <g id="year-markers" transform="translate(0, 40)">
+      <text x="0" y="0" class="year-label" text-anchor="middle">1994</text>
+      <text x="80" y="0" class="year-label" text-anchor="middle">2000</text>
+      <text x="160" y="0" class="year-label" text-anchor="middle">2005</text>
+      <text x="280" y="0" class="year-label" text-anchor="middle">2008</text>
+      <text x="380" y="0" class="year-label" text-anchor="middle">2012</text>
+      <text x="480" y="0" class="year-label" text-anchor="middle">2018</text>
+      <text x="580" y="0" class="year-label" text-anchor="middle">2022</text>
+      <text x="680" y="0" class="year-label" text-anchor="middle">2025</text>
+      <text x="742" y="0" class="year-label" text-anchor="middle">Present</text>
+    </g>
+    
+    <!-- Swim lane dividers -->
+    <g id="swim-lanes" transform="translate(0, 60)">
+      <line x1="0" y1="150" x2="742" y2="150" class="swim-lane-line"/>
+    </g>
+    
+    <!-- Category labels -->
+    <g id="category-labels" transform="translate(-40, 60)">
+      <text x="0" y="75" class="category-label" text-anchor="end">Anti-Poor</text>
+      <text x="0" y="87" class="category-label" text-anchor="end">Policies</text>
+      
+      <text x="0" y="225" class="category-label" text-anchor="end">Pro-Poor</text>
+      <text x="0" y="237" class="category-label" text-anchor="end">Policies</text>
+    </g>
+    
+    <!-- Events -->
+    <g id="events" transform="translate(0, 60)">
+      
+      <!-- Anti-Poor Policies (Top Lane) -->
+      <!-- 1994: Hospital user fees retained -->
+      <rect x="5" y="20" width="55" height="30" class="anti-poor-box" rx="3"/>
+      <text x="32" y="30" class="event-year" text-anchor="middle" fill="white">1994</text>
+      <text x="32" y="40" class="event-label" text-anchor="middle" fill="white">Hospital</text>
+      <text x="32" y="48" class="event-label" text-anchor="middle" fill="white">User Fees</text>
+      
+      <!-- 1996: GEAR policy -->
+      <rect x="40" y="55" width="45" height="25" class="anti-poor-box" rx="3"/>
+      <text x="62" y="65" class="event-year" text-anchor="middle" fill="white">1996</text>
+      <text x="62" y="75" class="event-label" text-anchor="middle" fill="white">GEAR</text>
+      
+      <!-- 1997: Municipal cost-recovery -->
+      <rect x="60" y="20" width="65" height="30" class="anti-poor-box" rx="3"/>
+      <text x="92" y="30" class="event-year" text-anchor="middle" fill="white">1997</text>
+      <text x="92" y="40" class="event-label" text-anchor="middle" fill="white">Municipal</text>
+      <text x="92" y="48" class="event-label" text-anchor="middle" fill="white">Cost-Recovery</text>
+      
+      <!-- 2001: Prepaid utilities expansion -->
+      <rect x="120" y="55" width="70" height="30" class="anti-poor-box" rx="3"/>
+      <text x="155" y="65" class="event-year" text-anchor="middle" fill="white">2001</text>
+      <text x="155" y="75" class="event-label" text-anchor="middle" fill="white">Prepaid</text>
+      <text x="155" y="83" class="event-label" text-anchor="middle" fill="white">Utilities</text>
+      
+      <!-- 2004: Anti-land invasion practices -->
+      <rect x="160" y="20" width="75" height="30" class="anti-poor-box" rx="3"/>
+      <text x="197" y="30" class="event-year" text-anchor="middle" fill="white">2004</text>
+      <text x="197" y="40" class="event-label" text-anchor="middle" fill="white">Anti-Land</text>
+      <text x="197" y="48" class="event-label" text-anchor="middle" fill="white">Invasion</text>
+      
+      <!-- 2006: School fee regime -->
+      <rect x="200" y="55" width="55" height="30" class="anti-poor-box" rx="3"/>
+      <text x="227" y="65" class="event-year" text-anchor="middle" fill="white">2006</text>
+      <text x="227" y="75" class="event-label" text-anchor="middle" fill="white">School</text>
+      <text x="227" y="83" class="event-label" text-anchor="middle" fill="white">Fee Regime</text>
+      
+      <!-- 2010: EPWP low wages -->
+      <rect x="290" y="20" width="60" height="30" class="anti-poor-box" rx="3"/>
+      <text x="320" y="30" class="event-year" text-anchor="middle" fill="white">2010</text>
+      <text x="320" y="40" class="event-label" text-anchor="middle" fill="white">EPWP</text>
+      <text x="320" y="48" class="event-label" text-anchor="middle" fill="white">Low Wages</text>
+      
+      <!-- 2012: Expenditure ceiling & health austerity -->
+      <rect x="320" y="55" width="85" height="30" class="anti-poor-box" rx="3"/>
+      <text x="362" y="65" class="event-year" text-anchor="middle" fill="white">2012</text>
+      <text x="362" y="75" class="event-label" text-anchor="middle" fill="white">Expenditure</text>
+      <text x="362" y="83" class="event-label" text-anchor="middle" fill="white">Ceiling</text>
+      
+      <!-- 2013: E-Tolls & Operation Clean Sweep -->
+      <rect x="360" y="20" width="80" height="30" class="anti-poor-box" rx="3"/>
+      <text x="400" y="30" class="event-year" text-anchor="middle" fill="white">2013</text>
+      <text x="400" y="40" class="event-label" text-anchor="middle" fill="white">E-Tolls &amp;</text>
+      <text x="400" y="48" class="event-label" text-anchor="middle" fill="white">Op. Clean</text>
+      
+      <!-- 2015: Grant erosion -->
+      <rect x="420" y="55" width="55" height="25" class="anti-poor-box" rx="3"/>
+      <text x="447" y="65" class="event-year" text-anchor="middle" fill="white">2015</text>
+      <text x="447" y="75" class="event-label" text-anchor="middle" fill="white">Grant Erosion</text>
+      
+      <!-- 2018: VAT increase -->
+      <rect x="490" y="20" width="55" height="25" class="anti-poor-box" rx="3"/>
+      <text x="517" y="30" class="event-year" text-anchor="middle" fill="white">2018</text>
+      <text x="517" y="40" class="event-label" text-anchor="middle" fill="white">VAT Increase</text>
+      
+      <!-- 2020: Fuel levy escalations -->
+      <rect x="550" y="55" width="75" height="30" class="anti-poor-box" rx="3"/>
+      <text x="587" y="65" class="event-year" text-anchor="middle" fill="white">2020</text>
+      <text x="587" y="75" class="event-label" text-anchor="middle" fill="white">Fuel Levy</text>
+      <text x="587" y="83" class="event-label" text-anchor="middle" fill="white">Escalations</text>
+      
+      <!-- Pro-Poor Policies (Bottom Lane) -->
+      <!-- 1994: Free Primary Health Care -->
+      <rect x="5" y="170" width="65" height="30" class="pro-poor-box" rx="3"/>
+      <text x="37" y="180" class="event-year" text-anchor="middle" fill="white">1994</text>
+      <text x="37" y="190" class="event-label" text-anchor="middle" fill="white">Free Primary</text>
+      <text x="37" y="198" class="event-label" text-anchor="middle" fill="white">Health Care</text>
+      
+      <!-- 1996: Schools Act -->
+      <rect x="40" y="205" width="50" height="25" class="pro-poor-box" rx="3"/>
+      <text x="65" y="215" class="event-year" text-anchor="middle" fill="white">1996</text>
+      <text x="65" y="225" class="event-label" text-anchor="middle" fill="white">Schools Act</text>
+      
+      <!-- 1998: Child Support Grant -->
+      <rect x="80" y="170" width="65" height="30" class="pro-poor-box" rx="3"/>
+      <text x="112" y="180" class="event-year" text-anchor="middle" fill="white">1998</text>
+      <text x="112" y="190" class="event-label" text-anchor="middle" fill="white">Child Support</text>
+      <text x="112" y="198" class="event-label" text-anchor="middle" fill="white">Grant</text>
+      
+      <!-- 2000: Free Basic Services -->
+      <rect x="100" y="205" width="70" height="30" class="pro-poor-box" rx="3"/>
+      <text x="135" y="215" class="event-year" text-anchor="middle" fill="white">2000</text>
+      <text x="135" y="225" class="event-label" text-anchor="middle" fill="white">Free Basic</text>
+      <text x="135" y="233" class="event-label" text-anchor="middle" fill="white">Services</text>
+      
+      <!-- 2002: PMTCT programme -->
+      <rect x="150" y="170" width="55" height="30" class="pro-poor-box" rx="3"/>
+      <text x="177" y="180" class="event-year" text-anchor="middle" fill="white">2002</text>
+      <text x="177" y="190" class="event-label" text-anchor="middle" fill="white">PMTCT</text>
+      <text x="177" y="198" class="event-label" text-anchor="middle" fill="white">Programme</text>
+      
+      <!-- 2004: ARV Roll-out -->
+      <rect x="180" y="205" width="55" height="25" class="pro-poor-box" rx="3"/>
+      <text x="207" y="215" class="event-year" text-anchor="middle" fill="white">2004</text>
+      <text x="207" y="225" class="event-label" text-anchor="middle" fill="white">ARV Roll-out</text>
+      
+      <!-- 2007: No-Fee Schools -->
+      <rect x="240" y="170" width="60" height="30" class="pro-poor-box" rx="3"/>
+      <text x="270" y="180" class="event-year" text-anchor="middle" fill="white">2007</text>
+      <text x="270" y="190" class="event-label" text-anchor="middle" fill="white">No-Fee</text>
+      <text x="270" y="198" class="event-label" text-anchor="middle" fill="white">Schools</text>
+      
+      <!-- 2008: Pension parity -->
+      <rect x="290" y="205" width="55" height="25" class="pro-poor-box" rx="3"/>
+      <text x="317" y="215" class="event-year" text-anchor="middle" fill="white">2008</text>
+      <text x="317" y="225" class="event-label" text-anchor="middle" fill="white">Pension Parity</text>
+      
+      <!-- 2010: CSG extension to age 18 -->
+      <rect x="350" y="170" width="75" height="30" class="pro-poor-box" rx="3"/>
+      <text x="387" y="180" class="event-year" text-anchor="middle" fill="white">2010</text>
+      <text x="387" y="190" class="event-label" text-anchor="middle" fill="white">CSG Extension</text>
+      <text x="387" y="198" class="event-label" text-anchor="middle" fill="white">to Age 18</text>
+      
+      <!-- 2019: Grahamstown ruling -->
+      <rect x="490" y="170" width="75" height="30" class="pro-poor-box" rx="3"/>
+      <text x="527" y="180" class="event-year" text-anchor="middle" fill="white">2019</text>
+      <text x="527" y="190" class="event-label" text-anchor="middle" fill="white">Grahamstown</text>
+      <text x="527" y="198" class="event-label" text-anchor="middle" fill="white">Ruling</text>
+      
+      <!-- 2020: COVID SRD grant -->
+      <rect x="570" y="205" width="70" height="30" class="pro-poor-box" rx="3"/>
+      <text x="605" y="215" class="event-year" text-anchor="middle" fill="white">2020</text>
+      <text x="605" y="225" class="event-label" text-anchor="middle" fill="white">COVID SRD</text>
+      <text x="605" y="233" class="event-label" text-anchor="middle" fill="white">Grant</text>
+      
+      <!-- 2024: BELA Act -->
+      <rect x="650" y="170" width="50" height="25" class="pro-poor-box" rx="3"/>
+      <text x="675" y="180" class="event-year" text-anchor="middle" fill="white">2024</text>
+      <text x="675" y="190" class="event-label" text-anchor="middle" fill="white">BELA Act</text>
+    </g>
+    
+    <!-- Timeline arrow at bottom -->
+    <g id="timeline" transform="translate(0, 440)">
+      <line x1="0" y1="0" x2="742" y2="0" class="timeline-line" marker-end="url(#timeline-arrow)"/>
+    </g>
+    
+    <!-- Trend analysis arrow -->
+    <g id="trend-analysis" transform="translate(0, 470)">
+      <path d="M 50,0 Q 250,20 450,25 Q 550,27 650,30" class="trend-arrow" marker-end="url(#trend-arrow)"/>
+      <text x="50" y="-5" class="trend-label">Simultaneous Expansion &amp; Restriction:</text>
+      <text x="500" y="50" class="trend-label">Policy Contradictions Throughout</text>
+    </g>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="50" y="570" class="event-label" fill="#666666">
+    Timeline demonstrates the paradox of simultaneous pro-poor and anti-poor policy implementation throughout South Africa's democratic era
+  </text>
+</svg>
