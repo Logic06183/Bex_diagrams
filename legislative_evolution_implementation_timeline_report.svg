@@ -1,0 +1,293 @@
+<!-- Legislative Evolution & Implementation Timeline (1993-2024) - Research Report Version -->
+<!-- Landscape A4 format: 842 x 595 pixels at 72 DPI -->
+<svg width="842" height="595" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595">
+  <defs>
+    <style>
+      /* Professional Typography - Arial/Helvetica only */
+      .main-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        fill: #1a1a1a;
+      }
+      .year-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 400;
+        fill: #333333;
+      }
+      .event-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 400;
+        fill: #1a1a1a;
+        text-anchor: start;
+      }
+      .event-label-bold {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        fill: #1a1a1a;
+        text-anchor: start;
+      }
+      .phase-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        fill: #4a4a4a;
+        text-anchor: middle;
+      }
+      .category-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 400;
+        fill: #666666;
+        font-style: italic;
+      }
+
+      /* Restrained monochromatic color scheme */
+      .timeline-axis { stroke: #1a1a1a; stroke-width: 1.5; }
+      .phase-divider { stroke: #cccccc; stroke-width: 1; stroke-dasharray: 2,4; }
+      .phase-region { fill: #f5f5f5; fill-opacity: 0.5; }
+
+      /* Simple geometric markers - diamond for legislation, circle for implementation, square for court */
+      .marker-legislation { fill: #1a1a1a; }
+      .marker-implementation { fill: #666666; }
+      .marker-court { fill: #4a7c9e; } /* Subtle blue-grey accent */
+
+      /* Connection lines */
+      .connector-line { stroke: #cccccc; stroke-width: 0.5; }
+    </style>
+
+    <!-- Arrow marker for timeline -->
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="842" height="595" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="421" y="30" class="main-title" text-anchor="middle">
+    Legislative Evolution and Implementation Timeline (1993–2024)
+  </text>
+
+  <!-- Main chart area -->
+  <g id="chart" transform="translate(80, 70)">
+
+    <!-- Phase background regions -->
+    <g id="phase-backgrounds">
+      <rect x="0" y="0" width="210" height="380" class="phase-region"/>
+      <rect x="210" y="0" width="280" height="380" class="phase-region"/>
+      <rect x="490" y="0" width="192" height="380" class="phase-region"/>
+    </g>
+
+    <!-- Phase dividers -->
+    <g id="phase-dividers">
+      <line x1="210" y1="10" x2="210" y2="370" class="phase-divider"/>
+      <line x1="490" y1="10" x2="490" y2="370" class="phase-divider"/>
+    </g>
+
+    <!-- Phase labels -->
+    <g id="phase-labels">
+      <text x="105" y="25" class="phase-label">Foundation Era</text>
+      <text x="350" y="25" class="phase-label">Implementation Period</text>
+      <text x="586" y="25" class="phase-label">Restriction & Securitization</text>
+    </g>
+
+    <!-- Central timeline axis -->
+    <line x1="0" y1="190" x2="682" y2="190" class="timeline-axis" marker-end="url(#arrow)"/>
+
+    <!-- Year markers on axis -->
+    <g id="year-markers">
+      <line x1="0" y1="185" x2="0" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="0" y="208" class="year-label" text-anchor="middle">1993</text>
+
+      <line x1="53" y1="185" x2="53" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="53" y="208" class="year-label" text-anchor="middle">1998</text>
+
+      <line x1="105" y1="185" x2="105" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="105" y="208" class="year-label" text-anchor="middle">2002</text>
+
+      <line x1="210" y1="185" x2="210" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="210" y="208" class="year-label" text-anchor="middle">2008</text>
+
+      <line x1="315" y1="185" x2="315" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="315" y="208" class="year-label" text-anchor="middle">2014</text>
+
+      <line x1="385" y1="185" x2="385" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="385" y="208" class="year-label" text-anchor="middle">2017</text>
+
+      <line x1="490" y1="185" x2="490" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="490" y="208" class="year-label" text-anchor="middle">2020</text>
+
+      <line x1="595" y1="185" x2="595" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="595" y="208" class="year-label" text-anchor="middle">2023</text>
+
+      <line x1="665" y1="185" x2="665" y2="195" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="665" y="208" class="year-label" text-anchor="middle">2024</text>
+    </g>
+
+    <!-- Category labels -->
+    <g id="categories">
+      <text x="-10" y="75" class="category-label" text-anchor="end">Legislation Passed</text>
+      <text x="-10" y="195" class="category-label" text-anchor="end">Implementation</text>
+      <text x="-10" y="315" class="category-label" text-anchor="end">Court Challenges</text>
+    </g>
+
+    <!-- Events - Legislation Passed (Above axis) -->
+    <g id="legislation-events">
+      <!-- 1993: Citizenship Act -->
+      <rect x="-3" y="57" width="6" height="6" transform="rotate(45 0 60)" class="marker-legislation"/>
+      <line x1="0" y1="60" x2="0" y2="190" class="connector-line"/>
+      <text x="6" y="56" class="event-label-bold">1993</text>
+      <text x="6" y="66" class="event-label">Citizenship Restoration</text>
+
+      <!-- 1995: SA Citizenship Act 88 -->
+      <rect x="12" y="87" width="6" height="6" transform="rotate(45 15 90)" class="marker-legislation"/>
+      <line x1="15" y1="90" x2="15" y2="190" class="connector-line"/>
+      <text x="21" y="86" class="event-label">1995</text>
+      <text x="21" y="96" class="event-label">Citizenship Act 88</text>
+
+      <!-- 1998: Refugees Act 130 -->
+      <rect x="50" y="57" width="6" height="6" transform="rotate(45 53 60)" class="marker-legislation"/>
+      <line x1="53" y1="60" x2="53" y2="190" class="connector-line"/>
+      <text x="59" y="56" class="event-label-bold">1998</text>
+      <text x="59" y="66" class="event-label">Refugees Act 130</text>
+
+      <!-- 2002: Immigration Act 13 -->
+      <rect x="102" y="57" width="6" height="6" transform="rotate(45 105 60)" class="marker-legislation"/>
+      <line x1="105" y1="60" x2="105" y2="190" class="connector-line"/>
+      <text x="111" y="56" class="event-label-bold">2002</text>
+      <text x="111" y="66" class="event-label">Immigration Act 13</text>
+
+      <!-- 2017: White Paper on Migration -->
+      <rect x="382" y="87" width="6" height="6" transform="rotate(45 385 90)" class="marker-legislation"/>
+      <line x1="385" y1="90" x2="385" y2="190" class="connector-line"/>
+      <text x="391" y="86" class="event-label">2017</text>
+      <text x="391" y="96" class="event-label">Migration White Paper</text>
+
+      <!-- 2020: BMA Act -->
+      <rect x="487" y="57" width="6" height="6" transform="rotate(45 490 60)" class="marker-legislation"/>
+      <line x1="490" y1="60" x2="490" y2="190" class="connector-line"/>
+      <text x="496" y="56" class="event-label-bold">2020</text>
+      <text x="496" y="66" class="event-label">BMA Act</text>
+
+      <!-- 2023: White Paper on Citizenship -->
+      <rect x="592" y="87" width="6" height="6" transform="rotate(45 595 90)" class="marker-legislation"/>
+      <line x1="595" y1="90" x2="595" y2="190" class="connector-line"/>
+      <text x="601" y="86" class="event-label">2023</text>
+      <text x="601" y="96" class="event-label">Citizenship White Paper</text>
+    </g>
+
+    <!-- Events - Implementation & Amendments (Below axis) -->
+    <g id="implementation-events">
+      <!-- 2000: Refugees Act commenced -->
+      <circle cx="79" cy="235" r="3" class="marker-implementation"/>
+      <line x1="79" y1="235" x2="79" y2="190" class="connector-line"/>
+      <text x="85" y="231" class="event-label">2000</text>
+      <text x="85" y="241" class="event-label">Refugees Act commenced</text>
+
+      <!-- 2003: Immigration Act commenced -->
+      <circle cx="118" cy="265" r="3" class="marker-implementation"/>
+      <line x1="118" y1="265" x2="118" y2="190" class="connector-line"/>
+      <text x="124" y="261" class="event-label">2003</text>
+      <text x="124" y="271" class="event-label">Immigration Act commenced</text>
+
+      <!-- 2014: Immigration Regulations -->
+      <circle cx="315" cy="235" r="3" class="marker-implementation"/>
+      <line x1="315" y1="235" x2="315" y2="190" class="connector-line"/>
+      <text x="321" y="231" class="event-label">2014</text>
+      <text x="321" y="241" class="event-label">Immigration Regulations</text>
+
+      <!-- 2016: Critical Skills List -->
+      <circle cx="359" cy="265" r="3" class="marker-implementation"/>
+      <line x1="359" y1="265" x2="359" y2="190" class="connector-line"/>
+      <text x="365" y="261" class="event-label">2016</text>
+      <text x="365" y="271" class="event-label">Critical Skills List</text>
+
+      <!-- 2019: ZEP Extension -->
+      <circle cx="437" cy="235" r="3" class="marker-implementation"/>
+      <line x1="437" y1="235" x2="437" y2="190" class="connector-line"/>
+      <text x="443" y="231" class="event-label">2019</text>
+      <text x="443" y="241" class="event-label">ZEP extension</text>
+
+      <!-- 2021: ZEP Termination -->
+      <circle cx="516" cy="235" r="3" class="marker-implementation"/>
+      <line x1="516" y1="235" x2="516" y2="190" class="connector-line"/>
+      <text x="522" y="231" class="event-label-bold">2021</text>
+      <text x="522" y="241" class="event-label">ZEP termination</text>
+
+      <!-- 2022: BMA Implementation -->
+      <circle cx="569" cy="265" r="3" class="marker-implementation"/>
+      <line x1="569" y1="265" x2="569" y2="190" class="connector-line"/>
+      <text x="575" y="261" class="event-label">2022</text>
+      <text x="575" y="271" class="event-label">BMA implementation</text>
+    </g>
+
+    <!-- Events - Court Challenges & Interpretations (Below axis, lower) -->
+    <g id="court-events">
+      <!-- 2008: Khosa v Minister -->
+      <rect x="207" y="302" width="6" height="6" class="marker-court"/>
+      <line x1="210" y1="305" x2="210" y2="290" class="connector-line"/>
+      <text x="216" y="301" class="event-label">2008</text>
+      <text x="216" y="311" class="event-label">Khosa v Minister</text>
+
+      <!-- 2012: Somali Community -->
+      <rect x="262" y="332" width="6" height="6" class="marker-court"/>
+      <line x1="265" y1="335" x2="265" y2="290" class="connector-line"/>
+      <text x="271" y="331" class="event-label">2012</text>
+      <text x="271" y="341" class="event-label">Somali Community</text>
+
+      <!-- 2014: LHR Case - Children -->
+      <rect x="312" y="302" width="6" height="6" class="marker-court"/>
+      <line x1="315" y1="305" x2="315" y2="290" class="connector-line"/>
+      <text x="321" y="301" class="event-label">2014</text>
+      <text x="321" y="311" class="event-label">LHR Case (Children)</text>
+
+      <!-- 2017: LHR v Minister -->
+      <rect x="382" y="332" width="6" height="6" class="marker-court"/>
+      <line x1="385" y1="335" x2="385" y2="290" class="connector-line"/>
+      <text x="391" y="331" class="event-label">2017</text>
+      <text x="391" y="341" class="event-label">LHR v Minister</text>
+
+      <!-- 2018: Scalabrini Centre -->
+      <rect x="408" y="302" width="6" height="6" class="marker-court"/>
+      <line x1="411" y1="305" x2="411" y2="290" class="connector-line"/>
+      <text x="417" y="301" class="event-label">2018</text>
+      <text x="417" y="311" class="event-label">Scalabrini Centre</text>
+
+      <!-- 2021: Makoma & Others -->
+      <rect x="513" y="332" width="6" height="6" class="marker-court"/>
+      <line x1="516" y1="335" x2="516" y2="290" class="connector-line"/>
+      <text x="522" y="331" class="event-label">2021</text>
+      <text x="522" y="341" class="event-label">Makoma & Others</text>
+
+      <!-- 2023: HSF/CoRMSA ZEP Challenge -->
+      <rect x="592" y="302" width="6" height="6" class="marker-court"/>
+      <line x1="595" y1="305" x2="595" y2="290" class="connector-line"/>
+      <text x="601" y="301" class="event-label-bold">2023</text>
+      <text x="601" y="311" class="event-label">HSF/CoRMSA ZEP Challenge</text>
+    </g>
+
+  </g>
+
+  <!-- Footer note -->
+  <text x="80" y="570" class="event-label" fill="#666666">
+    Progressive restriction: from rights-based to security-focused legislation, with increasing judicial challenges to restrictive measures.
+  </text>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(550, 480)">
+    <rect x="-3" y="-3" width="6" height="6" transform="rotate(45 0 0)" class="marker-legislation"/>
+    <text x="8" y="4" class="event-label">Legislation Passed</text>
+
+    <circle cx="0" cy="15" r="3" class="marker-implementation"/>
+    <text x="8" y="19" class="event-label">Implementation</text>
+
+    <rect x="-3" y="27" width="6" height="6" class="marker-court"/>
+    <text x="8" y="34" class="event-label">Court Challenge</text>
+  </g>
+
+</svg>
